@@ -1,0 +1,1729 @@
+/* =========================================================
+   PRANTIK PORTFOLIO
+   HERO SECTION
+   RETRO • ARCADE • COLORFUL • DEVELOPER
+========================================================= */
+
+
+/* =========================================================
+   HERO BASE
+========================================================= */
+
+.hero-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 120px 5% 70px;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(0, 0.9fr)
+    minmax(0, 1.1fr);
+
+  align-items: center;
+
+  gap: 30px;
+
+  overflow: hidden;
+
+  isolation: isolate;
+
+  background:
+    radial-gradient(
+      circle at 8% 15%,
+      rgba(255, 157, 205, 0.72),
+      transparent 27%
+    ),
+
+    radial-gradient(
+      circle at 32% 85%,
+      rgba(207, 183, 255, 0.72),
+      transparent 30%
+    ),
+
+    radial-gradient(
+      circle at 62% 12%,
+      rgba(164, 224, 255, 0.75),
+      transparent 29%
+    ),
+
+    radial-gradient(
+      circle at 94% 65%,
+      rgba(213, 188, 255, 0.7),
+      transparent 31%
+    ),
+
+    linear-gradient(
+      135deg,
+      #fff0f7 0%,
+      #eaf8ff 36%,
+      #f3edff 68%,
+      #fff4df 100%
+    );
+
+  transition:
+    background 0.5s ease;
+}
+
+
+/* =========================================================
+   RETRO GRID
+========================================================= */
+
+.hero-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  z-index: -2;
+
+  pointer-events: none;
+
+  opacity: 0.2;
+
+  background-image:
+    linear-gradient(
+      rgba(72, 65, 105, 0.13) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(72, 65, 105, 0.13) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+}
+
+
+/* =========================================================
+   LARGE COLOR BLOB
+========================================================= */
+
+.hero-section::after {
+  content: "";
+
+  position: absolute;
+
+  z-index: -1;
+
+  width: 620px;
+  height: 620px;
+
+  right: -220px;
+  bottom: -300px;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 72, 175, 0.25),
+      rgba(77, 184, 255, 0.18) 42%,
+      transparent 72%
+    );
+
+  filter: blur(25px);
+
+  pointer-events: none;
+
+  animation:
+    backgroundBlobFloat
+    9s
+    ease-in-out
+    infinite;
+}
+
+@keyframes backgroundBlobFloat {
+
+  0%,
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate3d(-40px, -35px, 0)
+      scale(1.1);
+  }
+}
+
+
+/* =========================================================
+   FLOATING RETRO CODE SYMBOLS
+========================================================= */
+
+.floating-symbol {
+  position: absolute;
+
+  z-index: 2;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  font-family:
+    "Courier New",
+    "Lucida Console",
+    monospace;
+
+  font-weight: 900;
+
+  line-height: 1;
+
+  opacity: 0.52;
+
+  text-rendering: geometricPrecision;
+
+  filter: none;
+
+  animation:
+    retroSymbolFloat
+    var(--speed, 9s)
+    steps(30, end)
+    infinite;
+}
+
+
+/* =========================================================
+   SYMBOL 1
+========================================================= */
+
+.symbol-1 {
+  top: 18%;
+  left: 8%;
+
+  font-size: 42px;
+
+  color: #ff2998;
+
+  text-shadow:
+    3px 3px 0 #8b1d70;
+
+  --speed: 8s;
+}
+
+
+/* =========================================================
+   SYMBOL 2
+========================================================= */
+
+.symbol-2 {
+  top: 35%;
+  left: 42%;
+
+  font-size: 34px;
+
+  color: #7055f5;
+
+  text-shadow:
+    3px 3px 0 #3d2a98;
+
+  --speed: 11s;
+}
+
+
+/* =========================================================
+   SYMBOL 3
+========================================================= */
+
+.symbol-3 {
+  top: 12%;
+  left: 53%;
+
+  font-size: 23px;
+
+  color: #009de5;
+
+  text-shadow:
+    3px 3px 0 #075486;
+
+  --speed: 7s;
+}
+
+
+/* =========================================================
+   SYMBOL 4
+========================================================= */
+
+.symbol-4 {
+  top: 68%;
+  left: 7%;
+
+  font-size: 38px;
+
+  color: #ff8500;
+
+  text-shadow:
+    3px 3px 0 #994b00;
+
+  --speed: 12s;
+}
+
+
+/* =========================================================
+   SYMBOL 5
+========================================================= */
+
+.symbol-5 {
+  top: 78%;
+  left: 38%;
+
+  font-size: 50px;
+
+  color: #a847ed;
+
+  text-shadow:
+    4px 4px 0 #5e2193;
+
+  --speed: 9s;
+}
+
+
+/* =========================================================
+   SYMBOL 6
+========================================================= */
+
+.symbol-6 {
+  top: 22%;
+  right: 7%;
+
+  font-size: 30px;
+
+  color: #009ee5;
+
+  text-shadow:
+    3px 3px 0 #07588e;
+
+  --speed: 13s;
+}
+
+
+/* =========================================================
+   SYMBOL 7
+========================================================= */
+
+.symbol-7 {
+  top: 76%;
+  right: 11%;
+
+  font-size: 28px;
+
+  color: #ff2998;
+
+  text-shadow:
+    3px 3px 0 #8b185d;
+
+  --speed: 8s;
+}
+
+
+/* =========================================================
+   SYMBOL 8
+========================================================= */
+
+.symbol-8 {
+  top: 50%;
+  left: 3%;
+
+  font-size: 28px;
+
+  color: #00a57b;
+
+  text-shadow:
+    3px 3px 0 #08604d;
+
+  --speed: 10s;
+}
+
+
+/* =========================================================
+   SYMBOL 9
+========================================================= */
+
+.symbol-9 {
+  top: 87%;
+  left: 55%;
+
+  font-size: 32px;
+
+  color: #ff6031;
+
+  text-shadow:
+    3px 3px 0 #963016;
+
+  --speed: 14s;
+}
+
+
+/* =========================================================
+   SYMBOL 10
+========================================================= */
+
+.symbol-10 {
+  top: 10%;
+  right: 27%;
+
+  font-size: 24px;
+
+  color: #6048ec;
+
+  text-shadow:
+    3px 3px 0 #38268d;
+
+  --speed: 9s;
+}
+
+
+/* =========================================================
+   SYMBOL 11
+========================================================= */
+
+.symbol-11 {
+  top: 60%;
+  right: 5%;
+
+  font-size: 34px;
+
+  color: #d9ae00;
+
+  text-shadow:
+    3px 3px 0 #8c7000;
+
+  --speed: 12s;
+}
+
+
+/* =========================================================
+   SYMBOL 12
+========================================================= */
+
+.symbol-12 {
+  top: 45%;
+  right: 43%;
+
+  font-size: 22px;
+
+  color: #ff3b9d;
+
+  text-shadow:
+    2px 2px 0 #8d1b60;
+
+  --speed: 8s;
+}
+
+
+/* =========================================================
+   SHARP RETRO MOVEMENT
+========================================================= */
+
+@keyframes retroSymbolFloat {
+
+  0% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(-5deg);
+  }
+
+  20% {
+    transform:
+      translate3d(8px, -12px, 0)
+      rotate(3deg);
+  }
+
+  40% {
+    transform:
+      translate3d(-5px, -25px, 0)
+      rotate(-3deg);
+  }
+
+  60% {
+    transform:
+      translate3d(12px, -18px, 0)
+      rotate(5deg);
+  }
+
+  80% {
+    transform:
+      translate3d(-8px, -8px, 0)
+      rotate(-2deg);
+  }
+
+  100% {
+    transform:
+      translate3d(0, 0, 0)
+      rotate(-5deg);
+  }
+}
+
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.hero-content {
+  position: relative;
+
+  z-index: 20;
+
+  min-width: 0;
+
+  max-width: 700px;
+}
+
+
+/* =========================================================
+   EYEBROW
+========================================================= */
+
+.hero-eyebrow {
+  margin: 0 0 15px;
+
+  color: #ff2998;
+
+  font-size: 15px;
+
+  font-weight: 900;
+
+  letter-spacing: 4px;
+
+  text-shadow:
+    2px 2px 0 rgba(255, 255, 255, 0.6);
+}
+
+
+/* =========================================================
+   MAIN TITLE
+========================================================= */
+
+.hero-content h1 {
+  position: relative;
+
+  margin: 0;
+
+  max-width: 100%;
+
+  font-size:
+    clamp(
+      55px,
+      7vw,
+      105px
+    );
+
+  line-height: 0.86;
+
+  font-weight: 1000;
+
+  letter-spacing: -5px;
+
+  color: #171923;
+
+  text-shadow:
+    5px 5px 0 rgba(89, 78, 112, 0.38);
+}
+
+
+/* =========================================================
+   BLUE NAME
+========================================================= */
+
+.hero-name-blue {
+  display: inline-block;
+
+  color: #159ee8 !important;
+
+  text-shadow:
+    5px 5px 0 #1557a5,
+    0 0 22px rgba(21, 158, 232, 0.32);
+
+  animation:
+    blueNameGlow
+    3s
+    ease-in-out
+    infinite;
+}
+
+@keyframes blueNameGlow {
+
+  0%,
+  100% {
+    text-shadow:
+      5px 5px 0 #1557a5,
+      0 0 15px rgba(21, 158, 232, 0.25);
+  }
+
+  50% {
+    text-shadow:
+      5px 5px 0 #1557a5,
+      0 0 30px rgba(21, 158, 232, 0.55);
+  }
+}
+
+
+/* =========================================================
+   ROLE
+========================================================= */
+
+.hero-role {
+  margin-top: 28px;
+
+  font-size: 16px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  color: #181a24;
+}
+
+.hero-role span {
+  margin: 0 9px;
+
+  color: #ff2998;
+}
+
+
+/* =========================================================
+   DESCRIPTION
+========================================================= */
+
+.hero-description {
+  max-width: 590px;
+
+  margin-top: 20px;
+
+  font-size: 16px;
+
+  line-height: 1.8;
+
+  color: #555c6d;
+}
+
+
+/* =========================================================
+   BUTTON AREA
+========================================================= */
+
+.hero-buttons {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+
+  margin-top: 35px;
+}
+
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.hero-primary-button,
+.hero-secondary-button {
+  min-height: 48px;
+
+  padding: 0 22px;
+
+  display: inline-flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  text-decoration: none;
+
+  font-size: 13px;
+
+  font-weight: 900;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+
+/* =========================================================
+   PRIMARY BUTTON
+========================================================= */
+
+.hero-primary-button {
+  background: #ff2998;
+
+  color: #ffffff;
+
+  border: 2px solid #ff2998;
+
+  box-shadow:
+    5px 5px 0 #721b91;
+}
+
+.hero-primary-button:hover {
+  transform:
+    translate(-3px, -3px);
+
+  box-shadow:
+    8px 8px 0 #721b91;
+}
+
+
+/* =========================================================
+   SECONDARY BUTTON
+========================================================= */
+
+.hero-secondary-button {
+  border:
+    2px solid
+    rgba(
+      30,
+      40,
+      70,
+      0.2
+    );
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.38
+    );
+
+  color: #151824;
+}
+
+.hero-secondary-button:hover {
+  transform:
+    translateY(-3px);
+
+  border-color:
+    #159ee8;
+
+  box-shadow:
+    0 0 22px
+    rgba(
+      21,
+      158,
+      232,
+      0.2
+    );
+}
+
+
+/* =========================================================
+   TAGS
+========================================================= */
+
+.hero-tags {
+  display: flex;
+
+  align-items: center;
+
+  flex-wrap: wrap;
+
+  gap: 10px;
+
+  margin-top: 25px;
+}
+
+.hero-tags span {
+  padding: 7px 12px;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+
+  border: 2px solid;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.42
+    );
+
+  box-shadow:
+    3px 3px 0
+    rgba(
+      0,
+      0,
+      0,
+      0.18
+    );
+
+  transition:
+    transform 0.2s ease;
+}
+
+.hero-tags span:hover {
+  transform:
+    translate(
+      -2px,
+      -2px
+    );
+}
+
+.tag-pink {
+  color: #ff2998;
+
+  border-color:
+    #ff2998;
+}
+
+.tag-blue {
+  color: #008ed8;
+
+  border-color:
+    #008ed8;
+}
+
+.tag-yellow {
+  color: #d8a900;
+
+  border-color:
+    #d8a900;
+}
+
+
+/* =========================================================
+   3D IMAGE AREA
+========================================================= */
+
+.hero-3d {
+  position: relative;
+
+  width: 100%;
+
+  min-width: 0;
+
+  height:
+    min(
+      680px,
+      75vh
+    );
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  perspective: 1200px;
+
+  transform-style:
+    preserve-3d;
+
+  z-index: 10;
+
+  touch-action:
+    pan-y;
+}
+
+
+/* =========================================================
+   IMAGE GLOW
+========================================================= */
+
+.hero-glow {
+  position: absolute;
+
+  width: 70%;
+
+  max-width: 520px;
+
+  aspect-ratio: 1;
+
+  border-radius: 50%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(
+        255,
+        62,
+        165,
+        0.28
+      ),
+      rgba(
+        0,
+        170,
+        255,
+        0.14
+      ) 45%,
+      transparent 70%
+    );
+
+  filter:
+    blur(30px);
+
+  animation:
+    glowPulse
+    4s
+    ease-in-out
+    infinite;
+
+  pointer-events:
+    none;
+}
+
+@keyframes glowPulse {
+
+  0%,
+  100% {
+    transform:
+      scale(0.95);
+
+    opacity: 0.7;
+  }
+
+  50% {
+    transform:
+      scale(1.08);
+
+    opacity: 1;
+  }
+}
+
+
+/* =========================================================
+   DEVELOPER CARD
+========================================================= */
+
+.developer-card {
+  position: relative;
+
+  z-index: 5;
+
+  width:
+    min(
+      520px,
+      100%
+    );
+
+  max-width: 100%;
+
+  aspect-ratio:
+    4 / 4.4;
+
+  transform-style:
+    preserve-3d;
+
+  will-change:
+    transform;
+
+  transition:
+    transform
+    0.12s
+    cubic-bezier(
+      0.2,
+      0.8,
+      0.2,
+      1
+    );
+}
+
+
+/* =========================================================
+   IMAGE CARD
+========================================================= */
+
+.developer-card-inner {
+  position: relative;
+
+  width: 100%;
+
+  height: 100%;
+
+  overflow: hidden;
+
+  border:
+    3px solid
+    rgba(
+      255,
+      62,
+      165,
+      0.82
+    );
+
+  border-radius: 22px;
+
+  background:
+    #ffffff;
+
+  transform:
+    translateZ(30px);
+
+  transform-style:
+    preserve-3d;
+
+  box-shadow:
+
+    8px 8px 0
+    rgba(
+      0,
+      170,
+      255,
+      0.52
+    ),
+
+    -8px -8px 0
+    rgba(
+      255,
+      215,
+      0,
+      0.35
+    ),
+
+    0 0 60px
+    rgba(
+      255,
+      62,
+      165,
+      0.22
+    );
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.developer-image {
+  width: 100%;
+
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  object-position: center;
+
+  user-select: none;
+
+  pointer-events: none;
+
+  transform:
+    translateZ(1px);
+
+  backface-visibility:
+    hidden;
+}
+
+
+/* =========================================================
+   IMAGE SHINE
+========================================================= */
+
+.card-shine {
+  position: absolute;
+
+  inset: 0;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      125deg,
+      rgba(
+        255,
+        255,
+        255,
+        0.18
+      ),
+      transparent 25%,
+      transparent 60%,
+      rgba(
+        0,
+        170,
+        255,
+        0.12
+      )
+    );
+
+  mix-blend-mode:
+    screen;
+
+  opacity: 0.42;
+
+  transform:
+    translateZ(45px);
+
+  backface-visibility:
+    hidden;
+}
+
+
+/* =========================================================
+   TECH BADGES
+   THESE MUST APPEAR IN FRONT OF IMAGE
+========================================================= */
+
+.floating-badge {
+  position: absolute;
+
+  z-index: 100;
+
+  min-width: 100px;
+
+  padding: 9px 12px;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  gap: 7px;
+
+  border: 2px solid;
+
+  border-radius: 8px;
+
+  font-size: 15px;
+
+  font-weight: 900;
+
+  background:
+    rgba(
+      255,
+      255,
+      255,
+      0.94
+    );
+
+  backdrop-filter:
+    blur(8px);
+
+  box-shadow:
+
+    5px 5px 0
+    rgba(
+      0,
+      0,
+      0,
+      0.22
+    ),
+
+    0 0 15px
+    rgba(
+      255,
+      255,
+      255,
+      0.25
+    );
+
+  pointer-events:
+    none;
+
+  transform:
+    translateZ(120px);
+
+  animation:
+    badgeFloat
+    4s
+    ease-in-out
+    infinite;
+}
+
+.floating-badge span {
+  font-size: 10px;
+
+  font-weight: 800;
+}
+
+
+/* =========================================================
+   REACT BADGE
+========================================================= */
+
+.badge-react {
+  top: 12%;
+
+  left: 4%;
+
+  color:
+    #009fd7;
+
+  border-color:
+    #009fd7;
+
+  animation-delay:
+    -1s;
+}
+
+
+/* =========================================================
+   JAVASCRIPT BADGE
+========================================================= */
+
+.badge-js {
+  top: 22%;
+
+  right: 3%;
+
+  color:
+    #c9a000;
+
+  border-color:
+    #c9a000;
+
+  animation-delay:
+    -2s;
+}
+
+
+/* =========================================================
+   NODE BADGE
+========================================================= */
+
+.badge-node {
+  bottom: 18%;
+
+  left: 3%;
+
+  color:
+    #55a900;
+
+  border-color:
+    #55a900;
+
+  animation-delay:
+    -3s;
+}
+
+
+/* =========================================================
+   BADGE FLOAT
+========================================================= */
+
+@keyframes badgeFloat {
+
+  0%,
+  100% {
+    transform:
+      translateZ(120px)
+      translateY(0)
+      rotate(-2deg);
+  }
+
+  50% {
+    transform:
+      translateZ(120px)
+      translateY(-12px)
+      rotate(2deg);
+  }
+}
+
+
+/* =========================================================
+   DEVELOPER LABEL
+========================================================= */
+
+.developer-label {
+  position: absolute;
+
+  z-index: 110;
+
+  right: 2%;
+
+  bottom: 9%;
+
+  padding: 12px 15px;
+
+  border:
+    2px solid
+    #ff2998;
+
+  background:
+    #ff2998;
+
+  color:
+    #ffffff;
+
+  font-size: 11px;
+
+  font-weight: 1000;
+
+  line-height: 1.3;
+
+  letter-spacing: 1px;
+
+  box-shadow:
+    5px 5px 0
+    #641b88;
+
+  pointer-events:
+    none;
+
+  transform:
+    translateZ(140px)
+    rotate(4deg);
+
+  animation:
+    labelFloat
+    4s
+    ease-in-out
+    infinite;
+}
+
+.developer-label span {
+  font-size: 18px;
+}
+
+
+/* =========================================================
+   LABEL FLOAT
+========================================================= */
+
+@keyframes labelFloat {
+
+  0%,
+  100% {
+    transform:
+      translateZ(140px)
+      rotate(4deg)
+      translateY(0);
+  }
+
+  50% {
+    transform:
+      translateZ(140px)
+      rotate(2deg)
+      translateY(-8px);
+  }
+}
+
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1100px) {
+
+  .hero-section {
+    grid-template-columns:
+      minmax(0, 0.95fr)
+      minmax(0, 1.05fr);
+
+    gap: 20px;
+
+    padding-left: 4%;
+    padding-right: 4%;
+  }
+
+  .hero-content h1 {
+    font-size:
+      clamp(
+        50px,
+        6.5vw,
+        85px
+      );
+  }
+
+  .developer-card {
+    width:
+      min(
+        460px,
+        100%
+      );
+  }
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 850px) {
+
+  .hero-section {
+    min-height: auto;
+
+    padding:
+      110px
+      6%
+      70px;
+
+    grid-template-columns:
+      minmax(0, 1fr);
+
+    gap: 50px;
+
+    text-align: center;
+  }
+
+
+  .hero-content {
+    width: 100%;
+
+    margin:
+      0 auto;
+  }
+
+
+  .hero-content h1 {
+    font-size:
+      clamp(
+        55px,
+        15vw,
+        90px
+      );
+
+    letter-spacing:
+      -4px;
+  }
+
+
+  .hero-description {
+    margin-left:
+      auto;
+
+    margin-right:
+      auto;
+  }
+
+
+  .hero-buttons {
+    justify-content:
+      center;
+  }
+
+
+  .hero-tags {
+    justify-content:
+      center;
+  }
+
+
+  .hero-3d {
+    width: 100%;
+
+    height: auto;
+
+    min-height: 470px;
+
+    perspective:
+      900px;
+  }
+
+
+  .developer-card {
+    width:
+      min(
+        420px,
+        88vw
+      );
+  }
+
+
+  .badge-react {
+    left: 2%;
+  }
+
+
+  .badge-js {
+    right: 1%;
+  }
+
+
+  .badge-node {
+    left: 2%;
+  }
+
+
+  .floating-symbol {
+    opacity:
+      0.38;
+  }
+}
+
+
+/* =========================================================
+   SMALL MOBILE
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .hero-section {
+    padding-top:
+      105px;
+
+    gap:
+      35px;
+  }
+
+
+  .hero-eyebrow {
+    font-size:
+      11px;
+
+    letter-spacing:
+      3px;
+  }
+
+
+  .hero-content h1 {
+    font-size:
+      17vw;
+
+    letter-spacing:
+      -3px;
+  }
+
+
+  .hero-role {
+    font-size:
+      11px;
+
+    line-height:
+      1.7;
+  }
+
+
+  .hero-description {
+    font-size:
+      14px;
+  }
+
+
+  .hero-buttons {
+    flex-direction:
+      column;
+
+    width:
+      100%;
+  }
+
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    width:
+      100%;
+  }
+
+
+  .hero-3d {
+    min-height:
+      400px;
+
+    perspective:
+      700px;
+  }
+
+
+  .developer-card {
+    width:
+      88vw;
+  }
+
+
+  .developer-card-inner {
+    border-radius:
+      16px;
+
+    box-shadow:
+
+      6px 6px 0
+      rgba(
+        0,
+        170,
+        255,
+        0.5
+      ),
+
+      -6px -6px 0
+      rgba(
+        255,
+        215,
+        0,
+        0.25
+      ),
+
+      0 0 40px
+      rgba(
+        255,
+        62,
+        165,
+        0.2
+      );
+  }
+
+
+  /* -----------------------------------------
+     BADGES
+  ----------------------------------------- */
+
+  .floating-badge {
+    min-width:
+      auto;
+
+    padding:
+      7px 9px;
+
+    font-size:
+      12px;
+
+    transform:
+      translateZ(100px);
+  }
+
+
+  .floating-badge span {
+    display:
+      none;
+  }
+
+
+  .badge-react {
+    top:
+      12%;
+
+    left:
+      0;
+  }
+
+
+  .badge-js {
+    top:
+      22%;
+
+    right:
+      0;
+  }
+
+
+  .badge-node {
+    bottom:
+      15%;
+
+    left:
+      0;
+  }
+
+
+  /* -----------------------------------------
+     DEVELOPER LABEL
+  ----------------------------------------- */
+
+  .developer-label {
+    right:
+      0;
+
+    bottom:
+      8%;
+
+    padding:
+      9px 11px;
+
+    font-size:
+      9px;
+
+    transform:
+      translateZ(120px)
+      rotate(4deg);
+  }
+
+
+  /* -----------------------------------------
+     SMALLER SYMBOLS
+  ----------------------------------------- */
+
+  .symbol-1 {
+    font-size:
+      30px;
+  }
+
+  .symbol-2 {
+    font-size:
+      25px;
+  }
+
+  .symbol-3 {
+    font-size:
+      18px;
+  }
+
+  .symbol-4 {
+    font-size:
+      28px;
+  }
+
+  .symbol-5 {
+    font-size:
+      35px;
+  }
+
+  .symbol-6 {
+    font-size:
+      22px;
+  }
+
+  .symbol-7 {
+    font-size:
+      20px;
+  }
+
+  .symbol-8 {
+    font-size:
+      22px;
+  }
+
+  .symbol-9 {
+    font-size:
+      25px;
+  }
+
+  .symbol-10 {
+    font-size:
+      18px;
+  }
+
+  .symbol-11 {
+    font-size:
+      25px;
+  }
+
+  .symbol-12 {
+    font-size:
+      17px;
+  }
+}
+
+
+/* =========================================================
+   ACCESSIBILITY
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .hero-section::after,
+  .floating-symbol,
+  .hero-content h1 span,
+  .hero-glow,
+  .floating-badge,
+  .developer-label {
+    animation:
+      none;
+  }
+
+  .developer-card {
+    transition:
+      none;
+  }
+}

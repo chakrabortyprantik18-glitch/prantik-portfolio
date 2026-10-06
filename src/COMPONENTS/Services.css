@@ -1,0 +1,977 @@
+/* =========================================================
+   SERVICES — CREATIVE RETRO / PREMIUM
+========================================================= */
+
+.services-section {
+  position: relative;
+  min-height: 100vh;
+  padding: 150px 6vw 120px;
+  overflow: hidden;
+
+  background:
+    radial-gradient(
+      circle at 85% 20%,
+      rgba(255, 79, 154, 0.16),
+      transparent 25%
+    ),
+    radial-gradient(
+      circle at 10% 80%,
+      rgba(21, 158, 232, 0.14),
+      transparent 28%
+    ),
+    linear-gradient(
+      135deg,
+      #fff5fa 0%,
+      #eefaff 48%,
+      #f3efff 100%
+    );
+
+  color: #17172b;
+}
+
+/* =========================================================
+   BACKGROUND GRID
+========================================================= */
+
+.services-grid-bg {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(23, 23, 43, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(23, 23, 43, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+
+  pointer-events: none;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 10%,
+      black 90%,
+      transparent
+    );
+}
+
+/* =========================================================
+   DECORATIONS
+========================================================= */
+
+.services-decoration {
+  position: absolute;
+
+  z-index: 1;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-weight: 900;
+
+  pointer-events: none;
+
+  opacity: 0.18;
+
+  animation:
+    servicesFloat 7s ease-in-out infinite;
+}
+
+.services-decoration-1 {
+  top: 18%;
+  left: 3%;
+
+  font-size: 6rem;
+
+  color: #ff4f9a;
+}
+
+.services-decoration-2 {
+  right: 3%;
+  bottom: 18%;
+
+  font-size: 6rem;
+
+  color: #159ee8;
+
+  animation-delay: -3s;
+}
+
+@keyframes servicesFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-20px)
+      rotate(5deg);
+  }
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+.services-header {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 1350px;
+
+  margin: 0 auto 80px;
+
+  display: grid;
+
+  grid-template-columns:
+    1.2fr
+    0.8fr;
+
+  gap: 80px;
+
+  align-items: end;
+}
+
+.services-header-left {
+  position: relative;
+}
+
+.services-label {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 9px 15px;
+
+  margin-bottom: 24px;
+
+  background: #17172b;
+
+  color: white;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.18em;
+
+  box-shadow:
+    6px 6px 0 #ff4f9a;
+}
+
+.services-header-left h2 {
+  margin: 0;
+
+  font-size:
+    clamp(5rem, 11vw, 10rem);
+
+  line-height: 0.76;
+
+  letter-spacing: -0.09em;
+
+  font-weight: 1000;
+
+  text-transform: uppercase;
+
+  color: #17172b;
+
+  text-shadow:
+    8px 8px 0 rgba(21, 158, 232, 0.14);
+}
+
+.services-header-right {
+  padding-bottom: 8px;
+}
+
+.services-header-right p {
+  max-width: 480px;
+
+  margin: 0 0 28px;
+
+  color: #65677a;
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+}
+
+.services-header-code {
+  display: inline-flex;
+
+  padding: 8px 12px;
+
+  border: 2px solid #17172b;
+
+  background: #ffe36e;
+
+  color: #17172b;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  box-shadow:
+    4px 4px 0 #17172b;
+}
+
+/* =========================================================
+   SERVICES LIST
+========================================================= */
+
+.services-list {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 1350px;
+
+  margin: 0 auto;
+
+  border-top: 3px solid #17172b;
+}
+
+/* =========================================================
+   SERVICE ITEM
+========================================================= */
+
+.service-item {
+  position: relative;
+
+  display: grid;
+
+  grid-template-columns:
+    90px
+    minmax(300px, 1fr)
+    300px
+    70px;
+
+  align-items: center;
+
+  gap: 35px;
+
+  min-height: 155px;
+
+  padding: 25px 20px;
+
+  border-bottom:
+    2px solid rgba(23, 23, 43, 0.22);
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.3s ease,
+    padding 0.3s ease,
+    background 0.3s ease;
+}
+
+/* Animated accent behind card */
+
+.service-item::before {
+  content: "";
+
+  position: absolute;
+
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  width: 0;
+
+  background: #ff4f9a;
+
+  transition:
+    width 0.35s ease;
+
+  z-index: -1;
+}
+
+.service-item:nth-child(2)::before {
+  background: #159ee8;
+}
+
+.service-item:nth-child(3)::before {
+  background: #8c6cff;
+}
+
+.service-item:nth-child(4)::before {
+  background: #ffca28;
+}
+
+.service-item:nth-child(5)::before {
+  background: #36d9a0;
+}
+
+.service-item:nth-child(6)::before {
+  background: #ff78bd;
+}
+
+.service-item:hover::before {
+  width: 100%;
+}
+
+.service-item:hover {
+  padding-left: 38px;
+
+  background:
+    rgba(255, 255, 255, 0.7);
+
+  transform:
+    translateX(8px);
+}
+
+/* =========================================================
+   NUMBER
+========================================================= */
+
+.service-number {
+  position: relative;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.8rem;
+
+  font-weight: 900;
+
+  color: #999aaa;
+
+  transition:
+    color 0.25s ease,
+    transform 0.3s ease;
+}
+
+.service-item:hover .service-number {
+  color: #17172b;
+
+  transform:
+    translateX(5px);
+}
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.service-main {
+  position: relative;
+}
+
+.service-main h3 {
+  margin: 0 0 10px;
+
+  font-size:
+    clamp(1.55rem, 2.6vw, 2.45rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -0.055em;
+
+  font-weight: 1000;
+
+  text-transform: uppercase;
+
+  color: #17172b;
+
+  transition:
+    transform 0.3s ease;
+}
+
+.service-item:hover .service-main h3 {
+  transform:
+    translateX(5px);
+}
+
+.service-main p {
+  max-width: 650px;
+
+  margin: 0;
+
+  color: #67697b;
+
+  font-size: 0.9rem;
+
+  line-height: 1.6;
+}
+
+/* =========================================================
+   TECHNOLOGY
+========================================================= */
+
+.service-tech {
+  position: relative;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.68rem;
+
+  font-weight: 900;
+
+  line-height: 1.8;
+
+  color: #77798b;
+
+  text-transform: uppercase;
+
+  transition:
+    color 0.25s ease;
+}
+
+.service-item:hover .service-tech {
+  color: #17172b;
+}
+
+/* =========================================================
+   ARROW
+========================================================= */
+
+.service-arrow {
+  position: relative;
+
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  border: 2px solid #17172b;
+
+  background: white;
+
+  color: #17172b;
+
+  font-size: 1.35rem;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    5px 5px 0 #17172b;
+
+  transition:
+    transform 0.3s ease,
+    background 0.3s ease;
+}
+
+.service-item:hover .service-arrow {
+  background: #17172b;
+
+  color: white;
+
+  transform:
+    translate(5px, -5px)
+    rotate(8deg);
+}
+
+/* =========================================================
+   BOTTOM CTA
+========================================================= */
+
+.services-bottom {
+  position: relative;
+
+  z-index: 5;
+
+  max-width: 1350px;
+
+  margin: 90px auto 0;
+}
+
+.services-bottom-line {
+  width: 100%;
+
+  height: 3px;
+
+  margin-bottom: 30px;
+
+  background: #17172b;
+}
+
+.services-bottom-content {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+.services-bottom-content span {
+  padding: 11px 16px;
+
+  border: 2px solid #17172b;
+
+  background: #ff9fc5;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  box-shadow:
+    4px 4px 0 #17172b;
+}
+
+.services-bottom-content strong {
+  font-size: 1rem;
+
+  font-weight: 1000;
+}
+
+.services-bottom-content a {
+  position: relative;
+
+  color: #7657e8;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.8rem;
+
+  font-weight: 900;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.services-bottom-content a:hover {
+  color: #159ee8;
+
+  transform:
+    translateX(4px);
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+.service-modal-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 9999;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  padding: 25px;
+
+  background:
+    rgba(17, 17, 30, 0.78);
+
+  backdrop-filter:
+    blur(10px);
+
+  animation:
+    modalFade 0.2s ease;
+}
+
+@keyframes modalFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+.service-modal {
+  position: relative;
+
+  width: min(720px, 100%);
+
+  padding: 48px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff7fb,
+      #eefaff
+    );
+
+  border: 3px solid #17172b;
+
+  box-shadow:
+    12px 12px 0 #ff4f9a,
+    19px 19px 0 #159ee8;
+
+  animation:
+    modalUp 0.3s ease;
+}
+
+@keyframes modalUp {
+  from {
+    opacity: 0;
+
+    transform:
+      translateY(30px)
+      scale(0.96);
+  }
+
+  to {
+    opacity: 1;
+
+    transform:
+      translateY(0)
+      scale(1);
+  }
+}
+
+.service-modal-top {
+  display: flex;
+
+  align-items: center;
+
+  justify-content: space-between;
+
+  margin-bottom: 35px;
+}
+
+.service-modal-number {
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.8rem;
+
+  font-weight: 900;
+
+  color: #159ee8;
+}
+
+.service-modal-close {
+  width: 44px;
+  height: 44px;
+
+  border: 2px solid #17172b;
+
+  background: #ffe36e;
+
+  color: #17172b;
+
+  font-size: 1.5rem;
+
+  font-weight: 900;
+
+  cursor: pointer;
+
+  box-shadow:
+    4px 4px 0 #17172b;
+
+  transition:
+    transform 0.2s ease;
+}
+
+.service-modal-close:hover {
+  transform:
+    translate(4px, -4px)
+    rotate(5deg);
+}
+
+.service-modal-label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.68rem;
+
+  font-weight: 900;
+
+  letter-spacing: 0.15em;
+
+  color: #ff4f9a;
+}
+
+.service-modal h3 {
+  margin: 0 0 25px;
+
+  font-size:
+    clamp(2.4rem, 6vw, 4.5rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -0.07em;
+
+  font-weight: 1000;
+
+  text-transform: uppercase;
+}
+
+.service-modal-description {
+  margin: 0 0 30px;
+
+  color: #5f6174;
+
+  font-size: 1rem;
+
+  line-height: 1.75;
+}
+
+.service-modal-tech {
+  padding: 20px;
+
+  margin-bottom: 30px;
+
+  border: 2px solid #17172b;
+
+  background: white;
+}
+
+.service-modal-tech span {
+  display: block;
+
+  margin-bottom: 8px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.65rem;
+
+  font-weight: 900;
+
+  color: #9091a0;
+}
+
+.service-modal-tech strong {
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.75rem;
+
+  line-height: 1.8;
+}
+
+.service-modal-button {
+  display: inline-flex;
+
+  padding: 14px 20px;
+
+  border: 2px solid #17172b;
+
+  background: #159ee8;
+
+  color: white;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+  text-decoration: none;
+
+  box-shadow:
+    5px 5px 0 #17172b;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.service-modal-button:hover {
+  background: #ff4f9a;
+
+  transform:
+    translate(4px, -4px);
+}
+
+/* =========================================================
+   TABLET
+========================================================= */
+
+@media (max-width: 1000px) {
+  .services-section {
+    padding:
+      120px 5vw
+      100px;
+  }
+
+  .services-header {
+    grid-template-columns: 1fr;
+
+    gap: 35px;
+  }
+
+  .service-item {
+    grid-template-columns:
+      65px
+      minmax(0, 1fr)
+      60px;
+
+    gap: 20px;
+  }
+
+  .service-tech {
+    grid-column: 2;
+
+    margin-top: -5px;
+  }
+
+  .service-arrow {
+    grid-column: 3;
+
+    grid-row: 1 / span 2;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .services-section {
+    padding:
+      100px 20px
+      80px;
+  }
+
+  .services-header {
+    margin-bottom: 55px;
+  }
+
+  .services-header-left h2 {
+    font-size: 4.3rem;
+  }
+
+  .services-header-right p {
+    font-size: 0.9rem;
+  }
+
+  .service-item {
+    grid-template-columns:
+      35px
+      minmax(0, 1fr)
+      44px;
+
+    gap: 10px;
+
+    min-height: 175px;
+
+    padding:
+      24px 5px;
+  }
+
+  .service-item:hover {
+    padding-left: 12px;
+  }
+
+  .service-number {
+    font-size: 0.65rem;
+  }
+
+  .service-main h3 {
+    font-size: 1.25rem;
+  }
+
+  .service-main p {
+    font-size: 0.8rem;
+  }
+
+  .service-tech {
+    grid-column: 2;
+
+    font-size: 0.58rem;
+  }
+
+  .service-arrow {
+    width: 42px;
+    height: 42px;
+
+    font-size: 1rem;
+  }
+
+  .services-decoration {
+    opacity: 0.1;
+  }
+
+  .services-bottom {
+    margin-top: 60px;
+  }
+
+  .services-bottom-content {
+    justify-content: flex-start;
+  }
+
+  .services-bottom-content strong {
+    font-size: 0.85rem;
+  }
+
+  .service-modal {
+    padding: 30px 24px;
+
+    box-shadow:
+      7px 7px 0 #ff4f9a,
+      12px 12px 0 #159ee8;
+  }
+
+  .service-modal h3 {
+    font-size: 2.5rem;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .services-decoration,
+  .service-modal-overlay,
+  .service-modal {
+    animation: none;
+  }
+
+  .service-item,
+  .service-arrow,
+  .service-modal-button {
+    transition: none;
+  }
+}

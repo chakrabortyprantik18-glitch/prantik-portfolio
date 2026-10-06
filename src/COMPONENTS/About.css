@@ -1,0 +1,1064 @@
+/* =========================================
+   ABOUT SECTION
+========================================= */
+
+.about-section {
+  position: relative;
+
+  width: 100%;
+  min-height: 100vh;
+
+  padding: 130px 6% 80px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #fff4fb 0%,
+      #edf8ff 45%,
+      #f3efff 72%,
+      #fff8ef 100%
+    );
+
+  color: #20232f;
+
+  overflow: hidden;
+}
+
+
+/* =========================================
+   CONTINUOUS RETRO GRID
+========================================= */
+
+.about-section::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(30, 30, 50, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(30, 30, 50, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 34px 34px;
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   SOFT BACKGROUND LIGHT
+========================================= */
+
+.about-section::after {
+  content: "";
+
+  position: absolute;
+
+  width: 500px;
+  height: 500px;
+
+  top: 10%;
+  right: -180px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255, 45, 155, 0.10),
+      transparent 68%
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   RETRO SYMBOLS
+========================================= */
+
+.about-symbol {
+  position: absolute;
+
+  z-index: 1;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-weight: 900;
+
+  pointer-events: none;
+
+  user-select: none;
+
+  animation:
+    aboutSymbolFloat
+    7s
+    steps(20, end)
+    infinite;
+}
+
+.about-symbol-1 {
+  top: 18%;
+  left: 4%;
+
+  font-size: 4rem;
+
+  color: #ff2d9b;
+
+  text-shadow:
+    4px 4px 0 #20232f;
+}
+
+.about-symbol-2 {
+  top: 30%;
+  right: 4%;
+
+  font-size: 2.8rem;
+
+  color: #159ee8;
+
+  text-shadow:
+    4px 4px 0 #20232f;
+
+  animation-delay: -2s;
+}
+
+.about-symbol-3 {
+  bottom: 25%;
+  left: 5%;
+
+  font-size: 3rem;
+
+  color: #8358e8;
+
+  text-shadow:
+    4px 4px 0 #20232f;
+
+  animation-delay: -4s;
+}
+
+.about-symbol-4 {
+  bottom: 15%;
+  right: 7%;
+
+  font-size: 3.2rem;
+
+  color: #ffbd17;
+
+  text-shadow:
+    4px 4px 0 #20232f;
+
+  animation-delay: -1s;
+}
+
+@keyframes aboutSymbolFloat {
+
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, -14px);
+  }
+
+}
+
+
+/* =========================================
+   HEADER
+========================================= */
+
+.about-header {
+  position: relative;
+
+  z-index: 5;
+
+  width: min(1200px, 100%);
+
+  margin: 0 auto 70px;
+}
+
+.about-kicker {
+  display: inline-block;
+
+  padding: 7px 13px;
+
+  border: 3px solid #20232f;
+
+  background: #ff2d9b;
+
+  color: #ffffff;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.78rem;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  box-shadow:
+    5px 5px 0 #20232f;
+}
+
+.about-header h2 {
+  margin: 24px 0 0;
+
+  font-family:
+    Impact,
+    "Arial Black",
+    sans-serif;
+
+  font-size:
+    clamp(3.4rem, 7vw, 6.8rem);
+
+  line-height: 0.9;
+
+  letter-spacing: -3px;
+
+  text-transform: uppercase;
+
+  color: #20232f;
+}
+
+.about-header h2 span {
+  color: #159ee8;
+
+  text-shadow:
+    5px 5px 0 #20232f;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+========================================= */
+
+.about-container {
+  position: relative;
+
+  z-index: 5;
+
+  width: min(1200px, 100%);
+
+  margin: 0 auto;
+
+  display: grid;
+
+  grid-template-columns:
+    minmax(380px, 0.9fr)
+    minmax(450px, 1.1fr);
+
+  gap: 75px;
+
+  align-items: center;
+}
+
+
+/* =========================================
+   TERMINAL AREA
+========================================= */
+
+.about-visual {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  justify-content: center;
+
+  width: 100%;
+}
+
+
+/* =========================================
+   CLEAN TERMINAL
+========================================= */
+
+.developer-terminal {
+  position: relative;
+
+  width: min(100%, 510px);
+
+  background: #11131a;
+
+  border: 4px solid #20232f;
+
+  box-shadow:
+    12px 12px 0 #159ee8,
+    20px 20px 0 #ff2d9b;
+
+  transform: rotate(-1.2deg);
+
+  overflow: hidden;
+
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.developer-terminal:hover {
+  transform:
+    rotate(0deg)
+    translateY(-6px);
+
+  box-shadow:
+    15px 15px 0 #159ee8,
+    24px 24px 0 #ff2d9b;
+}
+
+
+/* =========================================
+   TERMINAL HEADER
+========================================= */
+
+.terminal-header {
+  height: 55px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 0 18px;
+
+  background: #20232f;
+
+  border-bottom: 3px solid #3b3f4d;
+}
+
+.terminal-dots {
+  display: flex;
+
+  gap: 7px;
+}
+
+.terminal-dot {
+  width: 12px;
+  height: 12px;
+
+  display: block;
+
+  border-radius: 50%;
+
+  border: 2px solid #0a0b0f;
+}
+
+.dot-red {
+  background: #ff3d72;
+}
+
+.dot-yellow {
+  background: #ffd43b;
+}
+
+.dot-green {
+  background: #46e06f;
+}
+
+.terminal-title {
+  color: #dce1ee;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.78rem;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   TERMINAL BODY
+========================================= */
+
+.terminal-body {
+  position: relative;
+
+  padding: 30px;
+
+  min-height: 390px;
+
+  background: #11131a;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.92rem;
+
+  line-height: 1.5;
+}
+
+
+/* subtle scanlines */
+
+.terminal-body::before {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    repeating-linear-gradient(
+      0deg,
+      transparent 0,
+      transparent 4px,
+      rgba(255, 255, 255, 0.015) 5px
+    );
+
+  pointer-events: none;
+}
+
+
+/* =========================================
+   TERMINAL TEXT
+========================================= */
+
+.terminal-line {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  color: #f3f5fa;
+
+  font-weight: 700;
+}
+
+.terminal-prompt {
+  color: #ff2d9b;
+
+  font-weight: 900;
+}
+
+.terminal-output {
+  position: relative;
+
+  margin-top: 3px;
+
+  padding-left: 25px;
+
+  color: #aeb6c9;
+}
+
+.terminal-highlight {
+  color: #159ee8;
+
+  font-weight: 900;
+}
+
+.terminal-gap {
+  margin-top: 18px;
+}
+
+
+/* =========================================
+   STACK
+========================================= */
+
+.terminal-stack {
+  position: relative;
+
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 8px;
+
+  margin-top: 10px;
+
+  padding-left: 25px;
+}
+
+.terminal-tech {
+  display: inline-block;
+
+  padding: 5px 9px;
+
+  background: #171a22;
+
+  border: 2px solid;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+}
+
+.tech-react {
+  color: #61dafb;
+
+  border-color: #61dafb;
+}
+
+.tech-js {
+  color: #f7df1e;
+
+  border-color: #f7df1e;
+}
+
+.tech-node {
+  color: #69d37c;
+
+  border-color: #69d37c;
+}
+
+.tech-python {
+  color: #ffd343;
+
+  border-color: #ffd343;
+}
+
+
+/* =========================================
+   MINDSET
+========================================= */
+
+.terminal-mindset {
+  color: #ffbd17;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+
+/* =========================================
+   CURSOR
+========================================= */
+
+.terminal-cursor-line {
+  position: relative;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+
+  margin-top: 20px;
+}
+
+.terminal-cursor {
+  width: 9px;
+  height: 18px;
+
+  display: inline-block;
+
+  background: #ff2d9b;
+
+  animation:
+    terminalBlink
+    1s
+    steps(2, end)
+    infinite;
+}
+
+@keyframes terminalBlink {
+
+  50% {
+    opacity: 0;
+  }
+
+}
+
+
+/* =========================================
+   ABOUT TEXT
+========================================= */
+
+.about-content {
+  position: relative;
+
+  z-index: 5;
+}
+
+.about-intro {
+  margin: 0 0 25px;
+
+  color: #252836;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size:
+    clamp(1.35rem, 2.1vw, 1.8rem);
+
+  font-weight: 700;
+
+  line-height: 1.45;
+}
+
+.about-intro strong {
+  color: #159ee8;
+}
+
+.about-text {
+  max-width: 700px;
+
+  margin: 0 0 35px;
+
+  color: #626a79;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 0.98rem;
+
+  line-height: 1.8;
+}
+
+
+/* =========================================
+   INFO GRID
+========================================= */
+
+.about-info-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(2, minmax(0, 1fr));
+
+  gap: 14px;
+
+  margin-bottom: 35px;
+}
+
+.about-info-card {
+  min-height: 78px;
+
+  padding: 13px 15px;
+
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  background:
+    rgba(255, 255, 255, 0.72);
+
+  border: 2px solid #d6d9e1;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.about-info-card:hover {
+  transform:
+    translate(-3px, -3px);
+
+  box-shadow:
+    5px 5px 0 #20232f;
+}
+
+.info-icon {
+  width: 39px;
+  height: 39px;
+
+  flex-shrink: 0;
+
+  display: grid;
+
+  place-items: center;
+
+  border: 2px solid #20232f;
+
+  color: #20232f;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-weight: 900;
+}
+
+.card-pink .info-icon {
+  background: #ffb6dc;
+}
+
+.card-blue .info-icon {
+  background: #aee4ff;
+}
+
+.card-purple .info-icon {
+  background: #d2c0ff;
+}
+
+.card-yellow .info-icon {
+  background: #ffe28b;
+}
+
+.about-info-card small {
+  display: block;
+
+  margin-bottom: 3px;
+
+  color: #7a8190;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.58rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.about-info-card strong {
+  display: block;
+
+  color: #242735;
+
+  font-family:
+    Arial,
+    sans-serif;
+
+  font-size: 0.8rem;
+
+  font-weight: 800;
+}
+
+
+/* =========================================
+   STATEMENT
+========================================= */
+
+.about-statement {
+  display: flex;
+
+  align-items: center;
+
+  gap: 12px;
+}
+
+.statement-line {
+  width: 48px;
+  height: 4px;
+
+  flex-shrink: 0;
+
+  background:
+    linear-gradient(
+      90deg,
+      #ff2d9b 0 70%,
+      #159ee8 70% 100%
+    );
+}
+
+.about-statement p {
+  margin: 0;
+
+  color: #20232f;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.72rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.about-statement strong:nth-child(1) {
+  color: #ff2d9b;
+}
+
+.about-statement strong:nth-child(2) {
+  color: #159ee8;
+}
+
+.about-statement strong:nth-child(3) {
+  color: #8358e8;
+}
+
+.about-statement span {
+  color: #e69d00;
+}
+
+
+/* =========================================
+   BOTTOM STRIP
+========================================= */
+
+.about-bottom-strip {
+  position: relative;
+
+  z-index: 5;
+
+  width: min(1200px, 100%);
+
+  margin: 90px auto 0;
+
+  padding-top: 18px;
+
+  display: flex;
+
+  justify-content: space-between;
+
+  border-top: 3px solid #20232f;
+
+  color: #4e5564;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 0.7rem;
+
+  font-weight: 900;
+
+  letter-spacing: 1px;
+}
+
+.about-bottom-strip span:nth-child(1) {
+  color: #ff2d9b;
+}
+
+.about-bottom-strip span:nth-child(2) {
+  color: #159ee8;
+}
+
+.about-bottom-strip span:nth-child(3) {
+  color: #8358e8;
+}
+
+.about-bottom-strip span:nth-child(4) {
+  color: #d99800;
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 1000px) {
+
+  .about-section {
+    padding-left: 5%;
+    padding-right: 5%;
+  }
+
+  .about-container {
+    grid-template-columns: 1fr;
+
+    gap: 80px;
+  }
+
+  .about-visual {
+    width: min(650px, 100%);
+
+    margin: 0 auto;
+  }
+
+  .about-content {
+    width: min(700px, 100%);
+
+    margin: 0 auto;
+  }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 650px) {
+
+  .about-section {
+    padding: 100px 20px 50px;
+  }
+
+  .about-header {
+    margin-bottom: 55px;
+  }
+
+  .about-kicker {
+    padding: 6px 10px;
+
+    font-size: 0.65rem;
+  }
+
+  .about-header h2 {
+    font-size:
+      clamp(3rem, 15vw, 4.5rem);
+
+    letter-spacing: -2px;
+  }
+
+
+  /* Terminal */
+
+  .developer-terminal {
+    width: 100%;
+
+    border-width: 3px;
+
+    box-shadow:
+      8px 8px 0 #159ee8,
+      14px 14px 0 #ff2d9b;
+
+    transform: none;
+  }
+
+  .developer-terminal:hover {
+    transform:
+      translateY(-4px);
+
+    box-shadow:
+      10px 10px 0 #159ee8,
+      17px 17px 0 #ff2d9b;
+  }
+
+  .terminal-header {
+    height: 48px;
+
+    padding: 0 12px;
+  }
+
+  .terminal-dot {
+    width: 9px;
+    height: 9px;
+  }
+
+  .terminal-title {
+    font-size: 0.65rem;
+  }
+
+  .terminal-body {
+    padding: 22px 18px;
+
+    min-height: 370px;
+
+    font-size: 0.72rem;
+  }
+
+  .terminal-gap {
+    margin-top: 15px;
+  }
+
+  .terminal-output {
+    padding-left: 19px;
+  }
+
+  .terminal-stack {
+    padding-left: 19px;
+
+    gap: 5px;
+  }
+
+  .terminal-tech {
+    padding: 4px 6px;
+
+    font-size: 0.56rem;
+  }
+
+
+  /* Text */
+
+  .about-intro {
+    font-size: 1.2rem;
+
+    line-height: 1.5;
+  }
+
+  .about-text {
+    font-size: 0.88rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* Info */
+
+  .about-info-grid {
+    grid-template-columns: 1fr;
+
+    gap: 10px;
+  }
+
+  .about-info-card {
+    min-height: 70px;
+  }
+
+
+  /* Statement */
+
+  .about-statement {
+    align-items: flex-start;
+  }
+
+  .about-statement p {
+    font-size: 0.62rem;
+
+    line-height: 1.7;
+  }
+
+
+  /* Bottom strip */
+
+  .about-bottom-strip {
+    margin-top: 70px;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    font-size: 0.58rem;
+  }
+
+
+  /* Fewer background decorations */
+
+  .about-symbol-1,
+  .about-symbol-3 {
+    display: none;
+  }
+
+}
+
+
+/* =========================================
+   REDUCED MOTION
+========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .about-symbol,
+  .terminal-cursor {
+    animation: none;
+  }
+
+  .developer-terminal,
+  .about-info-card {
+    transition: none;
+  }
+
+}

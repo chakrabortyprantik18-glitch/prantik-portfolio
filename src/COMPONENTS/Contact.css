@@ -1,0 +1,922 @@
+/* ========================================
+   CONTACT SECTION
+======================================== */
+
+.contact-section {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  padding: 130px 7vw 35px;
+
+  background:
+    radial-gradient(
+      circle at 10% 15%,
+      rgba(21, 158, 232, 0.09),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 90% 20%,
+      rgba(141, 216, 247, 0.14),
+      transparent 28%
+    ),
+    radial-gradient(
+      circle at 50% 100%,
+      rgba(190, 220, 235, 0.12),
+      transparent 30%
+    ),
+    #f4f1eb;
+
+  color: #171923;
+}
+
+
+/* ========================================
+   GRID
+======================================== */
+
+.contact-grid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(23, 25, 35, 0.045) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(23, 25, 35, 0.045) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+
+  mask-image:
+    linear-gradient(
+      to bottom,
+      transparent,
+      black 12%,
+      black 88%,
+      transparent
+    );
+
+  pointer-events: none;
+}
+
+
+/* ========================================
+   FLOATING SYMBOLS
+======================================== */
+
+.contact-symbol {
+  position: absolute;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-weight: 900;
+
+  pointer-events: none;
+
+  opacity: 0.25;
+
+  animation:
+    contactFloat 8s ease-in-out infinite;
+}
+
+.contact-symbol-1 {
+  top: 14%;
+  left: 5%;
+
+  font-size: 65px;
+
+  color: #159ee8;
+}
+
+.contact-symbol-2 {
+  top: 27%;
+  right: 5%;
+
+  font-size: 55px;
+
+  color: #8dd8f7;
+
+  animation-delay: -2s;
+}
+
+.contact-symbol-3 {
+  top: 60%;
+  left: 3%;
+
+  font-size: 42px;
+
+  color: #159ee8;
+
+  animation-delay: -4s;
+}
+
+.contact-symbol-4 {
+  top: 72%;
+  right: 7%;
+
+  font-size: 58px;
+
+  color: #8dd8f7;
+
+  animation-delay: -1s;
+}
+
+.contact-symbol-5 {
+  top: 43%;
+  right: 14%;
+
+  font-size: 40px;
+
+  color: #159ee8;
+
+  animation-delay: -5s;
+}
+
+@keyframes contactFloat {
+  0%,
+  100% {
+    transform:
+      translateY(0)
+      rotate(0deg);
+  }
+
+  50% {
+    transform:
+      translateY(-16px)
+      rotate(3deg);
+  }
+}
+
+
+/* ========================================
+   CONTAINER
+======================================== */
+
+.contact-container {
+  position: relative;
+  z-index: 5;
+
+  max-width: 1400px;
+
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   HEADER
+======================================== */
+
+.contact-header {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: flex-end;
+
+  gap: 60px;
+
+  margin-bottom: 50px;
+}
+
+.contact-label {
+  display: inline-block;
+
+  padding: 8px 13px;
+
+  margin-bottom: 18px;
+
+  background: #171923;
+
+  color: #f4f1eb;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  box-shadow:
+    5px 5px 0 #8dd8f7;
+}
+
+.contact-header h2 {
+  margin: 0;
+
+  font-family:
+    Impact,
+    "Arial Black",
+    sans-serif;
+
+  font-size:
+    clamp(4rem, 9vw, 9rem);
+
+  line-height: 0.84;
+
+  letter-spacing: -5px;
+
+  color: #171923;
+}
+
+.contact-header h2 span {
+  color: #159ee8;
+
+  text-shadow:
+    5px 5px 0 #8dd8f7;
+}
+
+.contact-header-right {
+  max-width: 390px;
+
+  padding-bottom: 5px;
+}
+
+.contact-header-right p {
+  margin: 0 0 20px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 14px;
+
+  line-height: 1.7;
+
+  font-weight: 700;
+
+  color: #555762;
+}
+
+.contact-code {
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 2px;
+
+  color: #159ee8;
+}
+
+
+/* ========================================
+   AVAILABILITY
+======================================== */
+
+.contact-availability {
+  display: flex;
+
+  align-items: center;
+
+  gap: 13px;
+
+  margin-bottom: 28px;
+
+  padding: 12px 16px;
+
+  border-top: 2px solid #171923;
+  border-bottom: 2px solid #171923;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+}
+
+.availability-dot {
+  width: 9px;
+  height: 9px;
+
+  flex-shrink: 0;
+
+  background: #159ee8;
+
+  border: 2px solid #171923;
+
+  animation:
+    availabilityPulse 1.8s
+    ease-in-out infinite;
+}
+
+@keyframes availabilityPulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.availability-line {
+  flex: 1;
+
+  height: 1px;
+
+  background: #171923;
+
+  opacity: 0.2;
+}
+
+.availability-year {
+  color: #159ee8;
+}
+
+
+/* ========================================
+   CONTACT OPTIONS
+======================================== */
+
+.contact-options {
+  display: flex;
+
+  flex-wrap: wrap;
+
+  gap: 14px;
+}
+
+.contact-option {
+  display: flex;
+
+  align-items: center;
+
+  gap: 14px;
+
+  min-width: 230px;
+
+  padding: 13px 15px;
+
+  text-decoration: none;
+
+  color: #171923;
+
+  border: 2px solid #171923;
+
+  background: #faf8f3;
+
+  box-shadow:
+    4px 4px 0 #171923;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.contact-option:hover {
+  transform:
+    translate(-3px, -3px);
+
+  box-shadow:
+    7px 7px 0 #171923;
+}
+
+
+/* ========================================
+   APP ICONS
+======================================== */
+
+.contact-option-icon {
+  width: 43px;
+  height: 43px;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  border: 2px solid #171923;
+
+  font-size: 21px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+
+/* WhatsApp — original green */
+
+.contact-whatsapp .contact-option-icon {
+  background: #e8f8ee;
+
+  color: #25d366;
+}
+
+
+/* Instagram — original pink */
+
+.contact-instagram .contact-option-icon {
+  background: #fde8f0;
+
+  color: #e1306c;
+}
+
+
+/* Direct Call — deep green */
+
+.contact-call .contact-option-icon {
+  background: #e2eee8;
+
+  color: #176b4d;
+}
+
+.contact-option:hover
+.contact-option-icon {
+  transform:
+    scale(1.08)
+    rotate(-4deg);
+}
+
+
+/* ========================================
+   CONTACT TEXT
+======================================== */
+
+.contact-option-info {
+  display: flex;
+
+  flex-direction: column;
+
+  gap: 3px;
+
+  flex: 1;
+}
+
+.contact-option-info span {
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  opacity: 0.55;
+}
+
+.contact-option-info strong {
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 13px;
+
+  font-weight: 900;
+}
+
+
+/* ========================================
+   ARROW
+======================================== */
+
+.contact-option-arrow {
+  font-size: 20px;
+
+  transition:
+    transform 0.25s ease;
+}
+
+.contact-option:hover
+.contact-option-arrow {
+  transform:
+    translate(3px, -3px);
+}
+
+
+/* ========================================
+   BIG CTA
+======================================== */
+
+.contact-cta {
+  position: relative;
+
+  margin-top: 90px;
+
+  padding: 70px 40px;
+
+  text-align: center;
+
+  border: 3px solid #171923;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e9f3f7,
+      #e4f2f8 50%,
+      #edf5f7
+    );
+
+  box-shadow:
+    10px 10px 0 #171923;
+
+  overflow: hidden;
+}
+
+
+/* ========================================
+   CTA DECORATIONS
+======================================== */
+
+.cta-decoration {
+  position: absolute;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-weight: 900;
+
+  opacity: 0.22;
+
+  pointer-events: none;
+}
+
+.cta-decoration-1 {
+  top: 20px;
+  left: 30px;
+
+  font-size: 35px;
+
+  color: #159ee8;
+}
+
+.cta-decoration-2 {
+  bottom: 20px;
+  right: 35px;
+
+  font-size: 50px;
+
+  color: #8dd8f7;
+}
+
+.cta-small {
+  display: block;
+
+  margin-bottom: 15px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 3px;
+
+  color: #555762;
+}
+
+
+/* ========================================
+   CTA HEADING
+======================================== */
+
+.contact-cta h3 {
+  position: relative;
+
+  margin: 0;
+
+  font-family:
+    Impact,
+    "Arial Black",
+    sans-serif;
+
+  font-size:
+    clamp(3rem, 7vw, 7rem);
+
+  line-height: 0.88;
+
+  letter-spacing: -3px;
+
+  color: #171923;
+}
+
+
+/* LET'S — PINK */
+
+.contact-cta h3 .cta-lets {
+  color: #ff65b5;
+
+  text-shadow:
+    4px 4px 0 #8dd8f7;
+}
+
+
+/* MAKE — BLUE */
+
+.contact-cta h3 .cta-make {
+  color: #159ee8;
+
+  text-shadow:
+    4px 4px 0 #8dd8f7;
+}
+
+
+/* IT — WHITE */
+
+.contact-cta h3 .cta-it {
+  color: #ffffff;
+
+  text-shadow:
+    4px 4px 0 #171923;
+}
+
+
+/* LIVE — PURPLE */
+
+.contact-cta h3 .cta-live {
+  color: #8b5cf6;
+
+  text-shadow:
+    4px 4px 0 #8dd8f7;
+}
+
+
+/* ========================================
+   CTA DESCRIPTION
+======================================== */
+
+.contact-cta p {
+  max-width: 570px;
+
+  margin: 25px auto 30px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 13px;
+
+  line-height: 1.7;
+
+  font-weight: 700;
+
+  color: #555762;
+}
+
+
+/* ========================================
+   CTA BUTTON
+======================================== */
+
+.cta-button {
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 18px;
+
+  padding: 14px 20px;
+
+  background: #171923;
+
+  color: #f4f1eb;
+
+  text-decoration: none;
+
+  border: 2px solid #171923;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 11px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  box-shadow:
+    5px 5px 0 #8dd8f7;
+
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.cta-button:hover {
+  transform:
+    translate(-3px, -3px);
+
+  box-shadow:
+    8px 8px 0 #159ee8;
+}
+
+.cta-button span {
+  font-size: 18px;
+}
+
+
+/* ========================================
+   DOMAIN
+======================================== */
+
+.contact-domain {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  gap: 20px;
+
+  margin-top: 55px;
+
+  padding: 20px 0;
+
+  border-bottom: 2px solid #171923;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 10px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  color: #777982;
+}
+
+.contact-domain strong {
+  color: #159ee8;
+
+  font-size: 15px;
+
+  letter-spacing: 1px;
+}
+
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.contact-footer {
+  display: flex;
+
+  justify-content: space-between;
+  align-items: center;
+
+  padding-top: 22px;
+
+  font-family:
+    "Courier New",
+    monospace;
+
+  font-size: 9px;
+
+  font-weight: 900;
+
+  letter-spacing: 1.5px;
+
+  color: #777982;
+}
+
+.contact-footer a {
+  color: #171923;
+
+  text-decoration: none;
+
+  transition:
+    color 0.2s ease;
+}
+
+.contact-footer a:hover {
+  color: #159ee8;
+}
+
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .contact-header {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 30px;
+  }
+
+  .contact-header-right {
+    max-width: 550px;
+  }
+
+  .contact-option {
+    flex: 1;
+
+    min-width: 210px;
+  }
+}
+
+
+@media (max-width: 650px) {
+  .contact-section {
+    padding:
+      90px 5vw 25px;
+  }
+
+  .contact-header h2 {
+    font-size:
+      clamp(3.3rem, 16vw, 5rem);
+
+    letter-spacing: -3px;
+  }
+
+  .contact-header h2 span {
+    text-shadow:
+      3px 3px 0 #8dd8f7;
+  }
+
+  .contact-availability {
+    flex-wrap: wrap;
+  }
+
+  .availability-line {
+    display: none;
+  }
+
+  .contact-options {
+    flex-direction: column;
+  }
+
+  .contact-option {
+    width: 100%;
+
+    min-width: 0;
+  }
+
+  .contact-cta {
+    margin-top: 65px;
+
+    padding:
+      50px 20px;
+  }
+
+  .contact-cta h3 {
+    font-size:
+      clamp(2.7rem, 13vw, 4.5rem);
+  }
+
+  .contact-domain {
+    flex-wrap: wrap;
+  }
+
+  .contact-domain strong {
+    width: 100%;
+
+    order: -1;
+  }
+
+  .contact-footer {
+    flex-direction: column;
+
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .contact-symbol {
+    opacity: 0.15;
+  }
+}
+
+
+/* ========================================
+   REDUCED MOTION
+======================================== */
+
+@media (prefers-reduced-motion: reduce) {
+  .contact-symbol,
+  .availability-dot {
+    animation: none;
+  }
+
+  .contact-option,
+  .contact-option-icon,
+  .cta-button {
+    transition: none;
+  }
+}
