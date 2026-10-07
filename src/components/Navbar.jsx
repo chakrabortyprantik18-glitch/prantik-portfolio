@@ -1,9 +1,12 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Navbar.css";
 
 function Navbar() {
   const [activeSection, setActiveSection] = useState("home");
   const [menuOpen, setMenuOpen] = useState(false);
+  const [navbarVisible, setNavbarVisible] = useState(true);
+
+  const lastScrollY = useRef(0);
 
   const navigation = [
     { id: "home", label: "Home" },
@@ -13,6 +16,10 @@ function Navbar() {
     { id: "journey", label: "Experience" },
     { id: "contact", label: "Contact" },
   ];
+
+  /* =========================================================
+     ACTIVE SECTION
+  ========================================================= */
 
   useEffect(() => {
     const handleScroll = () => {
@@ -51,6 +58,59 @@ function Navbar() {
     };
   }, []);
 
+  /* =========================================================
+     SMART NAVBAR
+     SCROLL DOWN  → HIDE
+     SCROLL UP    → SHOW
+  ========================================================= */
+
+  useEffect(() => {
+    const handleNavbarScroll = () => {
+      const currentScrollY = window.scrollY;
+
+      // Always show navbar at the very top
+      if (currentScrollY <= 10) {
+        setNavbarVisible(true);
+        lastScrollY.current = currentScrollY;
+        return;
+      }
+
+      const difference = currentScrollY - lastScrollY.current;
+
+      // Ignore tiny movements
+      if (Math.abs(difference) < 8) {
+        return;
+      }
+
+      if (difference > 0) {
+        // Scrolling DOWN
+        setNavbarVisible(false);
+
+        // Close mobile menu if user starts scrolling
+        setMenuOpen(false);
+      } else {
+        // Scrolling UP
+        setNavbarVisible(true);
+      }
+
+      lastScrollY.current = currentScrollY;
+    };
+
+    lastScrollY.current = window.scrollY;
+
+    window.addEventListener("scroll", handleNavbarScroll, {
+      passive: true,
+    });
+
+    return () => {
+      window.removeEventListener("scroll", handleNavbarScroll);
+    };
+  }, []);
+
+  /* =========================================================
+     ESCAPE KEY
+  ========================================================= */
+
   useEffect(() => {
     const handleEscape = (event) => {
       if (event.key === "Escape") {
@@ -65,6 +125,10 @@ function Navbar() {
     };
   }, []);
 
+  /* =========================================================
+     BODY SCROLL LOCK
+  ========================================================= */
+
   useEffect(() => {
     document.body.classList.toggle("menu-open", menuOpen);
 
@@ -73,14 +137,27 @@ function Navbar() {
     };
   }, [menuOpen]);
 
+  /* =========================================================
+     NAVIGATION
+  ========================================================= */
+
   const handleNavigation = (id) => {
     setActiveSection(id);
     setMenuOpen(false);
+    setNavbarVisible(true);
   };
 
   return (
     <>
-      <header className="navbar">
+      {/* =====================================================
+          NAVBAR
+      ===================================================== */}
+
+      <header
+        className={`navbar ${
+          navbarVisible ? "navbar-visible" : "navbar-hidden"
+        }`}
+      >
         <div className="navbar-glow"></div>
 
         <div className="navbar-inner">
@@ -150,7 +227,10 @@ function Navbar() {
         </div>
       </header>
 
-      {/* MOBILE MENU */}
+      {/* =====================================================
+          MOBILE MENU
+      ===================================================== */}
+
       <div
         className={`mobile-menu ${
           menuOpen ? "is-open" : ""

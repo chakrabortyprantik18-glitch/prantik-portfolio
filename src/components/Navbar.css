@@ -1,16 +1,21 @@
 :root {
   --nav-bg: rgba(8, 12, 20, 0.82);
+
   --nav-border: rgba(255, 255, 255, 0.09);
 
   --nav-text: rgba(255, 255, 255, 0.62);
+
   --nav-text-hover: #ffffff;
 
   --nav-active: #ff4eac;
+
   --nav-accent: #ff3ea5;
+
   --nav-blue: #159ee8;
 
   --nav-button-text: #ffffff;
 }
+
 
 /* =========================================
    NAVBAR
@@ -34,10 +39,35 @@
   backdrop-filter: blur(20px);
   -webkit-backdrop-filter: blur(20px);
 
+  /* SMART SCROLL NAVBAR */
+
+  transform: translateY(0);
+
   transition:
+    transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
     background 0.3s ease,
     border-color 0.3s ease;
+
+  will-change: transform;
 }
+
+
+/* =========================================
+   SMART SCROLL STATES
+========================================= */
+
+.navbar.navbar-visible {
+  transform: translateY(0);
+}
+
+.navbar.navbar-hidden {
+  transform: translateY(-110%);
+}
+
+
+/* =========================================
+   NAVBAR BOTTOM ACCENT
+========================================= */
 
 .navbar::after {
   content: "";
@@ -61,6 +91,11 @@
   opacity: 0.4;
 }
 
+
+/* =========================================
+   NAVBAR GLOW
+========================================= */
+
 .navbar-glow {
   position: absolute;
 
@@ -82,6 +117,7 @@
   pointer-events: none;
 }
 
+
 /* =========================================
    INNER
 ========================================= */
@@ -93,9 +129,12 @@
   padding: 0 3.5%;
 
   display: flex;
+
   align-items: center;
+
   justify-content: space-between;
 }
+
 
 /* =========================================
    LOGO
@@ -103,6 +142,7 @@
 
 .navbar-logo {
   display: flex;
+
   align-items: center;
 
   gap: 2px;
@@ -112,6 +152,7 @@
   text-decoration: none;
 
   font-size: 20px;
+
   font-weight: 850;
 
   letter-spacing: -0.7px;
@@ -123,6 +164,7 @@
     filter 0.25s ease;
 }
 
+
 .navbar-logo:hover {
   transform: translateY(-2px);
 
@@ -133,6 +175,7 @@
     );
 }
 
+
 .logo-bracket {
   color: var(--nav-blue);
 
@@ -142,17 +185,21 @@
     transform 0.25s ease;
 }
 
+
 .navbar-logo:hover .logo-bracket:first-child {
   transform: translateX(-3px);
 }
+
 
 .navbar-logo:hover .logo-bracket:last-child {
   transform: translateX(3px);
 }
 
+
 .logo-name {
   color: #ffffff;
 }
+
 
 .logo-cursor {
   color: var(--nav-accent);
@@ -162,6 +209,7 @@
     1.2s
     infinite;
 }
+
 
 @keyframes cursorBlink {
   0%,
@@ -180,6 +228,7 @@
   }
 }
 
+
 /* =========================================
    DESKTOP NAVIGATION
 ========================================= */
@@ -188,10 +237,12 @@
   height: 100%;
 
   display: flex;
+
   align-items: center;
 
   gap: 8px;
 }
+
 
 .navbar-links a {
   position: relative;
@@ -201,7 +252,9 @@
   padding: 0 13px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   gap: 6px;
@@ -211,6 +264,7 @@
   text-decoration: none;
 
   font-size: 12px;
+
   font-weight: 650;
 
   transition:
@@ -218,11 +272,13 @@
     transform 0.25s ease;
 }
 
+
 .navbar-links a:hover {
   color: var(--nav-text-hover);
 
   transform: translateY(-1px);
 }
+
 
 .nav-number {
   font-size: 8px;
@@ -240,12 +296,14 @@
     transform 0.25s ease;
 }
 
+
 .navbar-links a:hover .nav-number,
 .navbar-links a.active .nav-number {
   opacity: 1;
 
   transform: translateY(0);
 }
+
 
 .navbar-links a::after {
   content: "";
@@ -272,14 +330,17 @@
     width 0.3s ease;
 }
 
+
 .navbar-links a:hover::after,
 .navbar-links a.active::after {
   width: 24px;
 }
 
+
 .navbar-links a.active {
   color: var(--nav-active);
 }
+
 
 /* =========================================
    ACTIONS
@@ -287,10 +348,12 @@
 
 .navbar-actions {
   display: flex;
+
   align-items: center;
 
   gap: 12px;
 }
+
 
 /* =========================================
    TALK BUTTON
@@ -298,12 +361,15 @@
 
 .talk-button {
   min-width: 118px;
+
   height: 42px;
 
   padding: 0 17px;
 
   display: flex;
+
   align-items: center;
+
   justify-content: center;
 
   gap: 10px;
@@ -317,6 +383,7 @@
   text-decoration: none;
 
   font-size: 11px;
+
   font-weight: 850;
 
   box-shadow:
@@ -328,6 +395,7 @@
     box-shadow 0.3s ease;
 }
 
+
 .talk-button:hover {
   transform: translateY(-3px);
 
@@ -336,6 +404,7 @@
     rgba(255, 62, 165, 0.3);
 }
 
+
 .talk-button strong {
   font-size: 18px;
 
@@ -343,10 +412,12 @@
     transform 0.3s ease;
 }
 
+
 .talk-button:hover strong {
   transform:
     translate(3px, -2px);
 }
+
 
 /* =========================================
    MOBILE MENU BUTTON
@@ -382,6 +453,7 @@
   z-index: 1100;
 }
 
+
 .mobile-menu-button span {
   display: block;
 
@@ -397,21 +469,25 @@
     opacity 0.3s ease;
 }
 
+
 .mobile-menu-button.is-open span:nth-child(1) {
   transform:
     translateY(7px)
     rotate(45deg);
 }
 
+
 .mobile-menu-button.is-open span:nth-child(2) {
   opacity: 0;
 }
+
 
 .mobile-menu-button.is-open span:nth-child(3) {
   transform:
     translateY(-7px)
     rotate(-45deg);
 }
+
 
 /* =========================================
    MOBILE MENU
@@ -435,6 +511,7 @@
     visibility 0.35s ease;
 }
 
+
 .mobile-menu.is-open {
   visibility: visible;
 
@@ -442,6 +519,7 @@
 
   opacity: 1;
 }
+
 
 .mobile-menu-background {
   position: absolute;
@@ -460,6 +538,7 @@
   -webkit-backdrop-filter: blur(25px);
 }
 
+
 .mobile-menu-inner {
   position: relative;
 
@@ -475,6 +554,7 @@
 
   overflow-y: auto;
 }
+
 
 /* =========================================
    MOBILE MENU TOP
@@ -502,9 +582,11 @@
   letter-spacing: 2px;
 }
 
+
 .mobile-menu-status {
   color: #159ee8;
 }
+
 
 /* =========================================
    MOBILE LINKS
@@ -520,12 +602,16 @@
     rgba(255, 255, 255, 0.1);
 }
 
+
 .mobile-menu-links a {
   min-height: 70px;
 
   display: grid;
 
-  grid-template-columns: 45px 1fr 30px;
+  grid-template-columns:
+    45px
+    1fr
+    30px;
 
   align-items: center;
 
@@ -545,12 +631,14 @@
     padding 0.25s ease;
 }
 
+
 .mobile-menu-links a:hover,
 .mobile-menu-links a.active {
   color: #ff3ea5;
 
   padding-left: 8px;
 }
+
 
 .mobile-nav-number {
   color: #159ee8;
@@ -564,6 +652,7 @@
   font-weight: 900;
 }
 
+
 .mobile-nav-label {
   font-size: 27px;
 
@@ -571,6 +660,7 @@
 
   letter-spacing: -0.8px;
 }
+
 
 .mobile-nav-arrow {
   font-size: 20px;
@@ -587,6 +677,7 @@
     transform 0.25s ease;
 }
 
+
 .mobile-menu-links a:hover .mobile-nav-arrow,
 .mobile-menu-links a.active .mobile-nav-arrow {
   opacity: 1;
@@ -594,6 +685,7 @@
   transform:
     translate(0, 0);
 }
+
 
 /* =========================================
    MOBILE TALK
@@ -609,6 +701,7 @@
   display: flex;
 
   align-items: center;
+
   justify-content: space-between;
 
   background: #ff3ea5;
@@ -628,9 +721,11 @@
     rgba(21, 158, 232, 0.6);
 }
 
+
 .mobile-menu-talk strong {
   font-size: 22px;
 }
+
 
 /* =========================================
    MOBILE FOOTER
@@ -661,6 +756,7 @@
   letter-spacing: 1px;
 }
 
+
 /* =========================================
    TABLET
 ========================================= */
@@ -684,6 +780,7 @@
     padding: 0 3%;
   }
 }
+
 
 /* =========================================
    MOBILE
@@ -719,6 +816,7 @@
   }
 }
 
+
 /* =========================================
    VERY SMALL PHONES
 ========================================= */
@@ -738,11 +836,13 @@
   }
 }
 
+
 /* =========================================
    REDUCED MOTION
 ========================================= */
 
 @media (prefers-reduced-motion: reduce) {
+  .navbar,
   .mobile-menu,
   .mobile-menu-links a,
   .mobile-menu-button span {
