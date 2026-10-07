@@ -1357,3 +1357,237 @@
     transition: none;
   }
 }
+/* =========================================================
+   UNIVERSAL BACKGROUND OVERRIDE
+   JOURNEY PAGE
+========================================================= */
+
+/*
+   Journey must use the same global background
+   as the rest of the website.
+*/
+
+.journey-section {
+  background: transparent !important;
+}
+
+
+/* =========================================================
+   REMOVE AMBIENT GLOW
+========================================================= */
+
+.journey-section::before {
+  content: none !important;
+
+  animation: none !important;
+
+  background: none !important;
+
+  filter: none !important;
+}
+
+
+/* =========================================================
+   SHARP STATIC GRID
+========================================================= */
+
+.journey-grid {
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(72, 65, 105, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(72, 65, 105, 0.12) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+
+  /*
+     No perspective.
+     No moving floor effect.
+  */
+  transform: none;
+
+  transform-origin: center;
+
+  opacity: 0.22;
+
+  mask-image: none;
+
+  animation: none !important;
+
+  pointer-events: none;
+}
+
+
+/* =========================================================
+   DISABLE GRID MOVEMENT
+========================================================= */
+
+.journey-grid {
+  animation: none !important;
+}
+
+
+/* =========================================================
+   KEEP FLOATING SYMBOLS ANIMATED
+========================================================= */
+
+.journey-symbol {
+  animation:
+    symbolFloat
+    6s
+    ease-in-out
+    infinite;
+}
+
+
+/*
+   Keep the special rotating symbol.
+*/
+
+.journey-symbol-1 {
+  animation:
+    symbolFloat
+    7s
+    ease-in-out
+    infinite,
+    symbolRotate
+    14s
+    linear
+    infinite;
+}
+
+
+/* =========================================================
+   STATIC CARD BACKGROUND
+========================================================= */
+
+.journey-card {
+  background: #ffffff;
+
+  backdrop-filter: none;
+
+  -webkit-backdrop-filter: none;
+}
+
+
+/* =========================================================
+   STATIC CURRENT SECTION
+========================================================= */
+
+.journey-current {
+  background: #17172b;
+}
+
+
+/* =========================================================
+   STATIC TITLE LINE
+========================================================= */
+
+.journey-header h2 span::after {
+  background: #159ee8;
+
+  animation: none;
+}
+
+
+/* =========================================================
+   REMOVE EXCESSIVE TITLE FLOAT
+========================================================= */
+
+.journey-header h2 {
+  animation: none;
+}
+
+
+/* =========================================================
+   KEEP LABEL / SYMBOL / TIMELINE ANIMATIONS
+========================================================= */
+
+/*
+   We intentionally DO NOT disable:
+
+   - symbolFloat
+   - symbolRotate
+   - markerPulse
+   - timelineLight
+   - statusPulse
+   - labelScan
+   - card hover effects
+
+   Those are actual UI animations rather than
+   background effects.
+*/
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 600px) {
+
+  .journey-grid {
+    background-size: 32px 32px;
+
+    opacity: 0.18;
+
+    transform: none;
+
+    animation: none !important;
+  }
+
+
+  .journey-section {
+    background: transparent !important;
+  }
+
+
+  .journey-card {
+    background: #ffffff;
+
+    backdrop-filter: none;
+
+    -webkit-backdrop-filter: none;
+  }
+
+
+  .journey-symbol {
+    opacity: 0.16;
+  }
+}
+
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .journey-grid,
+  .journey-section::before,
+  .journey-header h2,
+  .journey-header h2 span::after {
+    animation: none !important;
+  }
+
+}
+/* =========================================================
+   FIX — JOURNEY HEADING LETTER SPACING
+========================================================= */
+
+.journey-header h2 {
+  letter-spacing: -0.035em;
+}
+
+/* Keep the same spacing on mobile */
+@media (max-width: 600px) {
+  .journey-header h2 {
+    letter-spacing: -0.035em;
+  }
+}

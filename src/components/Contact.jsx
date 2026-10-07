@@ -9,10 +9,18 @@ import {
 
 import {
   faPhone,
+  faEnvelope,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Contact() {
   const contacts = [
+    {
+      icon: faEnvelope,
+      label: "BUSINESS EMAIL",
+      title: "contact@prantik.online",
+      link: "mailto:contact@prantik.online",
+      className: "contact-email",
+    },
     {
       icon: faWhatsapp,
       label: "WHATSAPP",
@@ -206,12 +214,10 @@ function Contact() {
           </p>
 
           <a
-            href="https://wa.link/gzyeqb"
-            target="_blank"
-            rel="noopener noreferrer"
+            href="mailto:contact@prantik.online"
             className="cta-button"
           >
-            START A CONVERSATION
+            SEND AN EMAIL
             <span>→</span>
           </a>
 

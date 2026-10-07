@@ -1,7 +1,7 @@
 /* =========================================================
    PRANTIK PORTFOLIO
    HERO SECTION
-   RETRO • ARCADE • COLORFUL • DEVELOPER
+   RETRO • ARCADE • SHARP • DEVELOPER
 ========================================================= */
 
 
@@ -31,41 +31,13 @@
 
   isolation: isolate;
 
-  background:
-    radial-gradient(
-      circle at 8% 15%,
-      rgba(255, 157, 205, 0.72),
-      transparent 27%
-    ),
+  /*
+    IMPORTANT:
+    Hero now uses the universal site background.
+  */
+  background: transparent;
 
-    radial-gradient(
-      circle at 32% 85%,
-      rgba(207, 183, 255, 0.72),
-      transparent 30%
-    ),
-
-    radial-gradient(
-      circle at 62% 12%,
-      rgba(164, 224, 255, 0.75),
-      transparent 29%
-    ),
-
-    radial-gradient(
-      circle at 94% 65%,
-      rgba(213, 188, 255, 0.7),
-      transparent 31%
-    ),
-
-    linear-gradient(
-      135deg,
-      #fff0f7 0%,
-      #eaf8ff 36%,
-      #f3edff 68%,
-      #fff4df 100%
-    );
-
-  transition:
-    background 0.5s ease;
+  color: #171923;
 }
 
 
@@ -84,16 +56,16 @@
 
   pointer-events: none;
 
-  opacity: 0.2;
+  opacity: 0.22;
 
   background-image:
     linear-gradient(
-      rgba(72, 65, 105, 0.13) 1px,
+      rgba(72, 65, 105, 0.15) 1px,
       transparent 1px
     ),
     linear-gradient(
       90deg,
-      rgba(72, 65, 105, 0.13) 1px,
+      rgba(72, 65, 105, 0.15) 1px,
       transparent 1px
     );
 
@@ -102,57 +74,11 @@
 
 
 /* =========================================================
-   LARGE COLOR BLOB
+   NO MOVING BACKGROUND BLOB
 ========================================================= */
 
 .hero-section::after {
-  content: "";
-
-  position: absolute;
-
-  z-index: -1;
-
-  width: 620px;
-  height: 620px;
-
-  right: -220px;
-  bottom: -300px;
-
-  border-radius: 50%;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 72, 175, 0.25),
-      rgba(77, 184, 255, 0.18) 42%,
-      transparent 72%
-    );
-
-  filter: blur(25px);
-
-  pointer-events: none;
-
-  animation:
-    backgroundBlobFloat
-    9s
-    ease-in-out
-    infinite;
-}
-
-@keyframes backgroundBlobFloat {
-
-  0%,
-  100% {
-    transform:
-      translate3d(0, 0, 0)
-      scale(1);
-  }
-
-  50% {
-    transform:
-      translate3d(-40px, -35px, 0)
-      scale(1.1);
-  }
+  content: none;
 }
 
 
@@ -184,6 +110,10 @@
 
   filter: none;
 
+  /*
+    Sharp movement.
+    No fading / color changing.
+  */
   animation:
     retroSymbolFloat
     var(--speed, 9s)
@@ -539,31 +469,12 @@
 
   color: #159ee8 !important;
 
+  /*
+    STATIC SHADOW.
+    No pulsing glow.
+  */
   text-shadow:
-    5px 5px 0 #1557a5,
-    0 0 22px rgba(21, 158, 232, 0.32);
-
-  animation:
-    blueNameGlow
-    3s
-    ease-in-out
-    infinite;
-}
-
-@keyframes blueNameGlow {
-
-  0%,
-  100% {
-    text-shadow:
-      5px 5px 0 #1557a5,
-      0 0 15px rgba(21, 158, 232, 0.25);
-  }
-
-  50% {
-    text-shadow:
-      5px 5px 0 #1557a5,
-      0 0 30px rgba(21, 158, 232, 0.55);
-  }
+    5px 5px 0 #1557a5;
 }
 
 
@@ -582,6 +493,7 @@
 
   color: #181a24;
 }
+
 
 .hero-role span {
   margin: 0 9px;
@@ -668,6 +580,7 @@
     5px 5px 0 #721b91;
 }
 
+
 .hero-primary-button:hover {
   transform:
     translate(-3px, -3px);
@@ -688,19 +601,17 @@
       30,
       40,
       70,
-      0.2
+      0.35
     );
 
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.38
-    );
+  /*
+    Static background.
+  */
+  background: #ffffff;
 
   color: #151824;
 }
+
 
 .hero-secondary-button:hover {
   transform:
@@ -710,13 +621,7 @@
     #159ee8;
 
   box-shadow:
-    0 0 22px
-    rgba(
-      21,
-      158,
-      232,
-      0.2
-    );
+    4px 4px 0 #159ee8;
 }
 
 
@@ -736,6 +641,7 @@
   margin-top: 25px;
 }
 
+
 .hero-tags span {
   padding: 7px 12px;
 
@@ -747,13 +653,7 @@
 
   border: 2px solid;
 
-  background:
-    rgba(
-      255,
-      255,
-      255,
-      0.42
-    );
+  background: #ffffff;
 
   box-shadow:
     3px 3px 0
@@ -768,6 +668,7 @@
     transform 0.2s ease;
 }
 
+
 .hero-tags span:hover {
   transform:
     translate(
@@ -776,6 +677,7 @@
     );
 }
 
+
 .tag-pink {
   color: #ff2998;
 
@@ -783,12 +685,14 @@
     #ff2998;
 }
 
+
 .tag-blue {
   color: #008ed8;
 
   border-color:
     #008ed8;
 }
+
 
 .tag-yellow {
   color: #d8a900;
@@ -848,53 +752,17 @@
 
   border-radius: 50%;
 
-  background:
-    radial-gradient(
-      circle,
-      rgba(
-        255,
-        62,
-        165,
-        0.28
-      ),
-      rgba(
-        0,
-        170,
-        255,
-        0.14
-      ) 45%,
-      transparent 70%
-    );
+  /*
+    Static glow.
+    No pulsing.
+  */
+  background: #ffd6ec;
 
-  filter:
-    blur(30px);
+  filter: none;
 
-  animation:
-    glowPulse
-    4s
-    ease-in-out
-    infinite;
+  opacity: 0.55;
 
-  pointer-events:
-    none;
-}
-
-@keyframes glowPulse {
-
-  0%,
-  100% {
-    transform:
-      scale(0.95);
-
-    opacity: 0.7;
-  }
-
-  50% {
-    transform:
-      scale(1.08);
-
-    opacity: 1;
-  }
+  pointer-events: none;
 }
 
 
@@ -951,12 +819,7 @@
 
   border:
     3px solid
-    rgba(
-      255,
-      62,
-      165,
-      0.82
-    );
+    #ff2998;
 
   border-radius: 22px;
 
@@ -972,27 +835,17 @@
   box-shadow:
 
     8px 8px 0
-    rgba(
-      0,
-      170,
-      255,
-      0.52
-    ),
+    #00aaff,
 
     -8px -8px 0
-    rgba(
-      255,
-      215,
-      0,
-      0.35
-    ),
+    #ffd700,
 
-    0 0 60px
+    0 0 40px
     rgba(
       255,
-      62,
-      165,
-      0.22
+      41,
+      152,
+      0.18
     );
 }
 
@@ -1037,6 +890,10 @@
 
   pointer-events: none;
 
+  /*
+    Static shine.
+    No moving gradient.
+  */
   background:
     linear-gradient(
       125deg,
@@ -1044,20 +901,17 @@
         255,
         255,
         255,
-        0.18
+        0.16
       ),
       transparent 25%,
-      transparent 60%,
+      transparent 75%,
       rgba(
         0,
         170,
         255,
-        0.12
+        0.08
       )
     );
-
-  mix-blend-mode:
-    screen;
 
   opacity: 0.42;
 
@@ -1071,7 +925,6 @@
 
 /* =========================================================
    TECH BADGES
-   THESE MUST APPEAR IN FRONT OF IMAGE
 ========================================================= */
 
 .floating-badge {
@@ -1100,15 +953,7 @@
   font-weight: 900;
 
   background:
-    rgba(
-      255,
-      255,
-      255,
-      0.94
-    );
-
-  backdrop-filter:
-    blur(8px);
+    #ffffff;
 
   box-shadow:
 
@@ -1118,14 +963,6 @@
       0,
       0,
       0.22
-    ),
-
-    0 0 15px
-    rgba(
-      255,
-      255,
-      255,
-      0.25
     );
 
   pointer-events:
@@ -1140,6 +977,7 @@
     ease-in-out
     infinite;
 }
+
 
 .floating-badge span {
   font-size: 10px;
@@ -1282,6 +1120,7 @@
     infinite;
 }
 
+
 .developer-label span {
   font-size: 18px;
 }
@@ -1327,6 +1166,7 @@
     padding-right: 4%;
   }
 
+
   .hero-content h1 {
     font-size:
       clamp(
@@ -1335,6 +1175,7 @@
         85px
       );
   }
+
 
   .developer-card {
     width:
@@ -1455,253 +1296,466 @@
 
 
 /* =========================================================
-   SMALL MOBILE
+   FINAL MOBILE HERO FIX
 ========================================================= */
 
-@media (max-width: 500px) {
+@media (max-width: 850px) {
 
   .hero-section {
-    padding-top:
-      105px;
+    width: 100%;
 
-    gap:
-      35px;
+    max-width: 100%;
+
+    min-height: auto;
+
+    padding:
+      105px
+      20px
+      55px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 35px;
+
+    overflow: hidden;
+  }
+
+
+  .hero-content {
+    width: 100%;
+
+    max-width: 650px;
+
+    min-width: 0;
+
+    text-align: center;
   }
 
 
   .hero-eyebrow {
-    font-size:
-      11px;
+    margin-bottom: 14px;
 
-    letter-spacing:
-      3px;
+    font-size: 12px;
+
+    letter-spacing: 3px;
   }
 
 
   .hero-content h1 {
+    width: 100%;
+
+    max-width: 100%;
+
+    margin: 0;
+
     font-size:
-      17vw;
+      clamp(
+        48px,
+        14vw,
+        82px
+      );
+
+    line-height: 0.9;
 
     letter-spacing:
-      -3px;
+      clamp(-4px, -0.8vw, -2px);
+
+    overflow-wrap: normal;
+
+    word-break: normal;
+  }
+
+
+  .hero-name-blue {
+    display: block;
+
+    width: 100%;
+
+    white-space: nowrap;
+
+    font-size: 0.88em;
+
+    letter-spacing:
+      clamp(-3px, -0.6vw, -1px);
+
+    text-shadow:
+      3px 3px 0 #1557a5;
   }
 
 
   .hero-role {
-    font-size:
-      11px;
+    margin-top: 24px;
 
-    line-height:
-      1.7;
+    font-size: 11px;
+
+    line-height: 1.8;
+
+    letter-spacing: 0.7px;
+  }
+
+
+  .hero-role span {
+    margin: 0 5px;
   }
 
 
   .hero-description {
-    font-size:
-      14px;
+    width: 100%;
+
+    max-width: 540px;
+
+    margin:
+      17px auto 0;
+
+    padding: 0 5px;
+
+    font-size: 14px;
+
+    line-height: 1.7;
   }
 
 
   .hero-buttons {
-    flex-direction:
-      column;
+    width: 100%;
 
-    width:
-      100%;
+    margin-top: 28px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: stretch;
+
+    gap: 12px;
   }
 
 
   .hero-primary-button,
   .hero-secondary-button {
-    width:
-      100%;
+    width: 100%;
+
+    min-height: 54px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    margin: 0;
+  }
+
+
+  .hero-tags {
+    width: 100%;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 9px;
+
+    margin-top: 23px;
   }
 
 
   .hero-3d {
-    min-height:
-      400px;
+    width: 100%;
 
-    perspective:
-      700px;
+    max-width: 520px;
+
+    height: auto;
+
+    min-height: 390px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: visible;
+
+    perspective: 850px;
   }
 
 
   .developer-card {
     width:
-      88vw;
-  }
-
-
-  .developer-card-inner {
-    border-radius:
-      16px;
-
-    box-shadow:
-
-      6px 6px 0
-      rgba(
-        0,
-        170,
-        255,
-        0.5
-      ),
-
-      -6px -6px 0
-      rgba(
-        255,
-        215,
-        0,
-        0.25
-      ),
-
-      0 0 40px
-      rgba(
-        255,
-        62,
-        165,
-        0.2
+      min(
+        88vw,
+        420px
       );
+
+    max-width: 420px;
+
+    margin: 0 auto;
   }
 
-
-  /* -----------------------------------------
-     BADGES
-  ----------------------------------------- */
 
   .floating-badge {
-    min-width:
-      auto;
+    z-index: 100;
 
+    min-width: auto;
+
+    padding: 7px 9px;
+
+    font-size: 12px;
+  }
+
+
+  .floating-badge span {
+    display: none;
+  }
+
+
+  .badge-react {
+    left: 1%;
+  }
+
+
+  .badge-js {
+    right: 1%;
+  }
+
+
+  .badge-node {
+    left: 1%;
+  }
+
+
+  .developer-label {
+    right: 1%;
+
+    bottom: 7%;
+
+    padding: 9px 11px;
+
+    font-size: 9px;
+  }
+
+
+  /*
+    Keep the symbols visible,
+    but less intrusive on mobile.
+  */
+  .floating-symbol {
+    opacity: 0.25;
+  }
+}
+
+
+/* =========================================================
+   SMALL PHONES
+========================================================= */
+
+@media (max-width: 500px) {
+
+  .hero-section {
     padding:
-      7px 9px;
+      98px
+      16px
+      45px;
 
+    gap: 30px;
+  }
+
+
+  .hero-content h1 {
     font-size:
-      12px;
+      clamp(
+        43px,
+        13.7vw,
+        70px
+      );
 
+    letter-spacing: -3px;
+  }
+
+
+  .hero-name-blue {
+    font-size: 0.84em;
+
+    letter-spacing: -2.5px;
+
+    text-shadow:
+      3px 3px 0 #1557a5;
+  }
+
+
+  .hero-role {
+    font-size: 10px;
+
+    letter-spacing: 0.5px;
+  }
+
+
+  .hero-description {
+    font-size: 13px;
+
+    line-height: 1.65;
+  }
+
+
+  .hero-buttons {
+    margin-top: 24px;
+  }
+
+
+  .hero-primary-button,
+  .hero-secondary-button {
+    min-height: 51px;
+
+    font-size: 12px;
+  }
+
+
+  .hero-3d {
+    min-height: 350px;
+  }
+
+
+  .developer-card {
+    width: 88vw;
+  }
+
+
+  .floating-badge {
     transform:
       translateZ(100px);
   }
 
 
-  .floating-badge span {
-    display:
-      none;
-  }
-
-
   .badge-react {
-    top:
-      12%;
+    top: 10%;
 
-    left:
-      0;
+    left: 0;
   }
 
 
   .badge-js {
-    top:
-      22%;
+    top: 18%;
 
-    right:
-      0;
+    right: 0;
   }
 
 
   .badge-node {
-    bottom:
-      15%;
+    bottom: 13%;
 
-    left:
-      0;
+    left: 0;
   }
 
-
-  /* -----------------------------------------
-     DEVELOPER LABEL
-  ----------------------------------------- */
 
   .developer-label {
-    right:
-      0;
+    right: 0;
 
-    bottom:
-      8%;
-
-    padding:
-      9px 11px;
-
-    font-size:
-      9px;
-
-    transform:
-      translateZ(120px)
-      rotate(4deg);
+    bottom: 7%;
   }
 
 
-  /* -----------------------------------------
-     SMALLER SYMBOLS
-  ----------------------------------------- */
-
   .symbol-1 {
-    font-size:
-      30px;
+    font-size: 30px;
   }
 
   .symbol-2 {
-    font-size:
-      25px;
+    font-size: 25px;
   }
 
   .symbol-3 {
-    font-size:
-      18px;
+    font-size: 18px;
   }
 
   .symbol-4 {
-    font-size:
-      28px;
+    font-size: 28px;
   }
 
   .symbol-5 {
-    font-size:
-      35px;
+    font-size: 35px;
   }
 
   .symbol-6 {
-    font-size:
-      22px;
+    font-size: 22px;
   }
 
   .symbol-7 {
-    font-size:
-      20px;
+    font-size: 20px;
   }
 
   .symbol-8 {
-    font-size:
-      22px;
+    font-size: 22px;
   }
 
   .symbol-9 {
-    font-size:
-      25px;
+    font-size: 25px;
   }
 
   .symbol-10 {
-    font-size:
-      18px;
+    font-size: 18px;
   }
 
   .symbol-11 {
-    font-size:
-      25px;
+    font-size: 25px;
   }
 
   .symbol-12 {
-    font-size:
-      17px;
+    font-size: 17px;
+  }
+}
+
+
+/* =========================================================
+   EXTRA SMALL PHONES
+========================================================= */
+
+@media (max-width: 380px) {
+
+  .hero-section {
+    padding-left: 13px;
+
+    padding-right: 13px;
+  }
+
+
+  .hero-content h1 {
+    font-size: 43px;
+
+    letter-spacing: -2.5px;
+  }
+
+
+  .hero-name-blue {
+    font-size: 0.82em;
+
+    letter-spacing: -2px;
+  }
+
+
+  .hero-role {
+    font-size: 9px;
+  }
+
+
+  .hero-description {
+    font-size: 12px;
+  }
+
+
+  .hero-3d {
+    min-height: 315px;
+  }
+
+
+  .developer-card {
+    width: 90vw;
   }
 }
 
@@ -1712,18 +1766,14 @@
 
 @media (prefers-reduced-motion: reduce) {
 
-  .hero-section::after,
   .floating-symbol,
-  .hero-content h1 span,
-  .hero-glow,
   .floating-badge,
   .developer-label {
-    animation:
-      none;
+    animation: none;
   }
 
+
   .developer-card {
-    transition:
-      none;
+    transition: none;
   }
 }

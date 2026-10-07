@@ -1272,3 +1272,114 @@
   }
 
 }
+/* =========================================
+   FINAL SKILLS OVERRIDES
+   ========================================= */
+
+/* Universal background comes from index.css */
+.skills-section {
+  background: transparent !important;
+}
+
+/* Remove Skills-specific background grid */
+.skills-section::before {
+  display: none !important;
+  background: none !important;
+}
+
+/* Remove Skills-specific glow */
+.skills-section::after {
+  display: none !important;
+  background: none !important;
+}
+
+/* Keep floating developer symbols */
+.skills-symbol {
+  animation: skillsFloat 7s steps(20, end) infinite;
+}
+
+/* Keep the sharp card style */
+.technology-card {
+  border-radius: 0;
+}
+
+/* Keep cards static until user interacts */
+.technology-card::before {
+  border-radius: 0;
+}
+
+/* Sharp technology logo */
+.technology-logo {
+  border-radius: 0;
+}
+
+/* Keep philosophy terminal static */
+.skills-philosophy {
+  border-radius: 0;
+}
+
+/* Keep modal sharp */
+.skill-modal {
+  border-radius: 0;
+}
+
+.modal-logo {
+  border-radius: 0;
+}
+
+/* =========================================
+   MOBILE
+   ========================================= */
+
+@media (max-width: 650px) {
+
+  .skills-section {
+    background: transparent !important;
+  }
+
+  .skills-section::before,
+  .skills-section::after {
+    display: none !important;
+  }
+
+  .skills-symbol {
+    opacity: 0.18;
+  }
+
+  .technology-card {
+    border-radius: 0;
+  }
+
+  .technology-logo {
+    border-radius: 0;
+  }
+
+  .skills-philosophy {
+    border-radius: 0;
+  }
+
+  .skill-modal {
+    border-radius: 0;
+  }
+
+  .modal-logo {
+    border-radius: 0;
+  }
+}
+
+/* =========================================
+   REDUCED MOTION
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+
+  .skills-symbol,
+  .philosophy-cursor,
+  .technology-card,
+  .technology-logo,
+  .technology-logo img,
+  .skill-modal {
+    animation: none !important;
+    transition: none !important;
+  }
+}

@@ -1,0 +1,106 @@
+/* =========================================================
+   CUSTOM CURSOR
+   PRANTIK RETRO DEVELOPER CURSOR
+========================================================= */
+
+.custom-cursor {
+  position: fixed;
+
+  top: 0;
+  left: 0;
+
+  width: 24px;
+  height: 24px;
+
+  z-index: 2147483647;
+
+  pointer-events: none;
+
+  display: block;
+
+  background: #171923;
+
+  border: 3px solid #171923;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+
+  box-shadow: 4px 4px 0 #159ee8;
+
+  opacity: 1;
+
+  will-change: left, top, transform;
+
+  transition:
+    width 0.15s ease,
+    height 0.15s ease,
+    background 0.15s ease,
+    box-shadow 0.15s ease;
+}
+
+/* =========================================================
+   INNER BLUE SQUARE
+========================================================= */
+
+.custom-cursor::after {
+  content: "";
+
+  position: absolute;
+
+  top: 50%;
+  left: 50%;
+
+  width: 8px;
+  height: 8px;
+
+  background: #159ee8;
+
+  transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+/* =========================================================
+   HOVER STATE
+========================================================= */
+
+.custom-cursor.cursor-hover {
+  width: 32px;
+  height: 32px;
+
+  background: #ff2998;
+
+  border-color: #171923;
+
+  box-shadow: 5px 5px 0 #159ee8;
+
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+
+.custom-cursor.cursor-hover::after {
+  background: #ffffff;
+}
+
+/* =========================================================
+   HIDE THE REAL BROWSER CURSOR
+========================================================= */
+
+@media (pointer: fine) {
+
+  html,
+  html *,
+  body,
+  body *,
+  #root,
+  #root * {
+    cursor: none !important;
+  }
+}
+
+/* =========================================================
+   TOUCH DEVICES
+========================================================= */
+
+@media (pointer: coarse) {
+
+  .custom-cursor {
+    display: none;
+  }
+}

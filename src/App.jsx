@@ -5,10 +5,13 @@ import Skills from "./components/Skills";
 import Services from "./components/Services";
 import Journey from "./components/Journey";
 import Contact from "./components/Contact";
+import CustomCursor from "./components/CustomCursor";
 
 function App() {
   return (
     <div className="app">
+      <CustomCursor />
+
       <Navbar />
 
       <main>

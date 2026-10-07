@@ -10,14 +10,11 @@
 
   padding: 130px 6% 80px;
 
-  background:
-    linear-gradient(
-      135deg,
-      #fff4fb 0%,
-      #edf8ff 45%,
-      #f3efff 72%,
-      #fff8ef 100%
-    );
+  /* IMPORTANT:
+     Universal background comes from index.css.
+     Do NOT create another section background here.
+  */
+  background: transparent;
 
   color: #20232f;
 
@@ -26,61 +23,8 @@
 
 
 /* =========================================
-   CONTINUOUS RETRO GRID
-========================================= */
-
-.about-section::before {
-  content: "";
-
-  position: absolute;
-
-  inset: 0;
-
-  background-image:
-    linear-gradient(
-      rgba(30, 30, 50, 0.045) 1px,
-      transparent 1px
-    ),
-    linear-gradient(
-      90deg,
-      rgba(30, 30, 50, 0.045) 1px,
-      transparent 1px
-    );
-
-  background-size: 34px 34px;
-
-  pointer-events: none;
-}
-
-
-/* =========================================
-   SOFT BACKGROUND LIGHT
-========================================= */
-
-.about-section::after {
-  content: "";
-
-  position: absolute;
-
-  width: 500px;
-  height: 500px;
-
-  top: 10%;
-  right: -180px;
-
-  background:
-    radial-gradient(
-      circle,
-      rgba(255, 45, 155, 0.10),
-      transparent 68%
-    );
-
-  pointer-events: none;
-}
-
-
-/* =========================================
    RETRO SYMBOLS
+   These remain animated.
 ========================================= */
 
 .about-symbol {
@@ -105,6 +49,7 @@
     infinite;
 }
 
+
 .about-symbol-1 {
   top: 18%;
   left: 4%;
@@ -116,6 +61,7 @@
   text-shadow:
     4px 4px 0 #20232f;
 }
+
 
 .about-symbol-2 {
   top: 30%;
@@ -131,6 +77,7 @@
   animation-delay: -2s;
 }
 
+
 .about-symbol-3 {
   bottom: 25%;
   left: 5%;
@@ -144,6 +91,7 @@
 
   animation-delay: -4s;
 }
+
 
 .about-symbol-4 {
   bottom: 15%;
@@ -159,8 +107,8 @@
   animation-delay: -1s;
 }
 
-@keyframes aboutSymbolFloat {
 
+@keyframes aboutSymbolFloat {
   0%,
   100% {
     transform: translate(0, 0);
@@ -169,7 +117,6 @@
   50% {
     transform: translate(10px, -14px);
   }
-
 }
 
 
@@ -186,6 +133,7 @@
 
   margin: 0 auto 70px;
 }
+
 
 .about-kicker {
   display: inline-block;
@@ -212,6 +160,7 @@
     5px 5px 0 #20232f;
 }
 
+
 .about-header h2 {
   margin: 24px 0 0;
 
@@ -231,6 +180,7 @@
 
   color: #20232f;
 }
+
 
 .about-header h2 span {
   color: #159ee8;
@@ -308,6 +258,7 @@
     box-shadow 0.3s ease;
 }
 
+
 .developer-terminal:hover {
   transform:
     rotate(0deg)
@@ -339,11 +290,13 @@
   border-bottom: 3px solid #3b3f4d;
 }
 
+
 .terminal-dots {
   display: flex;
 
   gap: 7px;
 }
+
 
 .terminal-dot {
   width: 12px;
@@ -356,17 +309,21 @@
   border: 2px solid #0a0b0f;
 }
 
+
 .dot-red {
   background: #ff3d72;
 }
+
 
 .dot-yellow {
   background: #ffd43b;
 }
 
+
 .dot-green {
   background: #46e06f;
 }
+
 
 .terminal-title {
   color: #dce1ee;
@@ -445,11 +402,13 @@
   font-weight: 700;
 }
 
+
 .terminal-prompt {
   color: #ff2d9b;
 
   font-weight: 900;
 }
+
 
 .terminal-output {
   position: relative;
@@ -461,11 +420,13 @@
   color: #aeb6c9;
 }
 
+
 .terminal-highlight {
   color: #159ee8;
 
   font-weight: 900;
 }
+
 
 .terminal-gap {
   margin-top: 18px;
@@ -490,6 +451,7 @@
   padding-left: 25px;
 }
 
+
 .terminal-tech {
   display: inline-block;
 
@@ -504,11 +466,13 @@
   font-weight: 900;
 }
 
+
 .tech-react {
   color: #61dafb;
 
   border-color: #61dafb;
 }
+
 
 .tech-js {
   color: #f7df1e;
@@ -516,11 +480,13 @@
   border-color: #f7df1e;
 }
 
+
 .tech-node {
   color: #69d37c;
 
   border-color: #69d37c;
 }
+
 
 .tech-python {
   color: #ffd343;
@@ -543,7 +509,7 @@
 
 
 /* =========================================
-   CURSOR
+   TERMINAL CURSOR
 ========================================= */
 
 .terminal-cursor-line {
@@ -557,6 +523,7 @@
 
   margin-top: 20px;
 }
+
 
 .terminal-cursor {
   width: 9px;
@@ -573,12 +540,11 @@
     infinite;
 }
 
-@keyframes terminalBlink {
 
+@keyframes terminalBlink {
   50% {
     opacity: 0;
   }
-
 }
 
 
@@ -591,6 +557,7 @@
 
   z-index: 5;
 }
+
 
 .about-intro {
   margin: 0 0 25px;
@@ -609,9 +576,11 @@
   line-height: 1.45;
 }
 
+
 .about-intro strong {
   color: #159ee8;
 }
+
 
 .about-text {
   max-width: 700px;
@@ -645,6 +614,7 @@
   margin-bottom: 35px;
 }
 
+
 .about-info-card {
   min-height: 78px;
 
@@ -666,6 +636,7 @@
     box-shadow 0.25s ease;
 }
 
+
 .about-info-card:hover {
   transform:
     translate(-3px, -3px);
@@ -673,6 +644,7 @@
   box-shadow:
     5px 5px 0 #20232f;
 }
+
 
 .info-icon {
   width: 39px;
@@ -695,21 +667,26 @@
   font-weight: 900;
 }
 
+
 .card-pink .info-icon {
   background: #ffb6dc;
 }
+
 
 .card-blue .info-icon {
   background: #aee4ff;
 }
 
+
 .card-purple .info-icon {
   background: #d2c0ff;
 }
 
+
 .card-yellow .info-icon {
   background: #ffe28b;
 }
+
 
 .about-info-card small {
   display: block;
@@ -728,6 +705,7 @@
 
   letter-spacing: 1.5px;
 }
+
 
 .about-info-card strong {
   display: block;
@@ -756,6 +734,7 @@
   gap: 12px;
 }
 
+
 .statement-line {
   width: 48px;
   height: 4px;
@@ -769,6 +748,7 @@
       #159ee8 70% 100%
     );
 }
+
 
 .about-statement p {
   margin: 0;
@@ -786,17 +766,21 @@
   letter-spacing: 1px;
 }
 
+
 .about-statement strong:nth-child(1) {
   color: #ff2d9b;
 }
+
 
 .about-statement strong:nth-child(2) {
   color: #159ee8;
 }
 
+
 .about-statement strong:nth-child(3) {
   color: #8358e8;
 }
+
 
 .about-statement span {
   color: #e69d00;
@@ -837,17 +821,21 @@
   letter-spacing: 1px;
 }
 
+
 .about-bottom-strip span:nth-child(1) {
   color: #ff2d9b;
 }
+
 
 .about-bottom-strip span:nth-child(2) {
   color: #159ee8;
 }
 
+
 .about-bottom-strip span:nth-child(3) {
   color: #8358e8;
 }
+
 
 .about-bottom-strip span:nth-child(4) {
   color: #d99800;
@@ -882,7 +870,6 @@
 
     margin: 0 auto;
   }
-
 }
 
 
@@ -914,7 +901,9 @@
   }
 
 
-  /* Terminal */
+  /* =====================================
+     TERMINAL
+  ===================================== */
 
   .developer-terminal {
     width: 100%;
@@ -928,6 +917,7 @@
     transform: none;
   }
 
+
   .developer-terminal:hover {
     transform:
       translateY(-4px);
@@ -937,20 +927,24 @@
       17px 17px 0 #ff2d9b;
   }
 
+
   .terminal-header {
     height: 48px;
 
     padding: 0 12px;
   }
 
+
   .terminal-dot {
     width: 9px;
     height: 9px;
   }
 
+
   .terminal-title {
     font-size: 0.65rem;
   }
+
 
   .terminal-body {
     padding: 22px 18px;
@@ -960,19 +954,23 @@
     font-size: 0.72rem;
   }
 
+
   .terminal-gap {
     margin-top: 15px;
   }
 
+
   .terminal-output {
     padding-left: 19px;
   }
+
 
   .terminal-stack {
     padding-left: 19px;
 
     gap: 5px;
   }
+
 
   .terminal-tech {
     padding: 4px 6px;
@@ -981,13 +979,16 @@
   }
 
 
-  /* Text */
+  /* =====================================
+     TEXT
+  ===================================== */
 
   .about-intro {
     font-size: 1.2rem;
 
     line-height: 1.5;
   }
+
 
   .about-text {
     font-size: 0.88rem;
@@ -996,7 +997,9 @@
   }
 
 
-  /* Info */
+  /* =====================================
+     INFO
+  ===================================== */
 
   .about-info-grid {
     grid-template-columns: 1fr;
@@ -1004,16 +1007,20 @@
     gap: 10px;
   }
 
+
   .about-info-card {
     min-height: 70px;
   }
 
 
-  /* Statement */
+  /* =====================================
+     STATEMENT
+  ===================================== */
 
   .about-statement {
     align-items: flex-start;
   }
+
 
   .about-statement p {
     font-size: 0.62rem;
@@ -1022,7 +1029,9 @@
   }
 
 
-  /* Bottom strip */
+  /* =====================================
+     BOTTOM STRIP
+  ===================================== */
 
   .about-bottom-strip {
     margin-top: 70px;
@@ -1035,13 +1044,47 @@
   }
 
 
-  /* Fewer background decorations */
+  /* =====================================
+     FEWER DECORATIVE SYMBOLS ON MOBILE
+  ===================================== */
 
   .about-symbol-1,
   .about-symbol-3 {
     display: none;
   }
+}
 
+
+/* =========================================
+   VERY SMALL PHONES
+========================================= */
+
+@media (max-width: 380px) {
+
+  .about-section {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .about-header h2 {
+    font-size: 2.8rem;
+  }
+
+  .developer-terminal {
+    box-shadow:
+      6px 6px 0 #159ee8,
+      11px 11px 0 #ff2d9b;
+  }
+
+  .terminal-body {
+    padding:
+      20px 14px;
+  }
+
+  .about-info-card {
+    padding-left: 11px;
+    padding-right: 11px;
+  }
 }
 
 
@@ -1060,5 +1103,4 @@
   .about-info-card {
     transition: none;
   }
-
 }

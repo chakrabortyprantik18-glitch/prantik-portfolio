@@ -183,7 +183,8 @@
 
   line-height: 0.76;
 
-  letter-spacing: -0.09em;
+  /* FIXED: prevents letters from overlapping */
+  letter-spacing: -0.035em;
 
   font-weight: 1000;
 
@@ -880,6 +881,9 @@
 
   .services-header-left h2 {
     font-size: 4.3rem;
+
+    /* Keep mobile heading readable too */
+    letter-spacing: -0.035em;
   }
 
   .services-header-right p {
@@ -973,5 +977,124 @@
   .service-arrow,
   .service-modal-button {
     transition: none;
+  }
+}
+
+/* =========================================================
+   UNIVERSAL BACKGROUND OVERRIDE
+   SERVICES PAGE
+========================================================= */
+
+/*
+  The entire website now uses the same background
+  from index.css.
+*/
+
+.services-section {
+  background: transparent !important;
+}
+
+/* =========================================================
+   STATIC SHARP GRID
+========================================================= */
+
+.services-grid-bg {
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(72, 65, 105, 0.12) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(72, 65, 105, 0.12) 1px,
+      transparent 1px
+    );
+
+  background-size: 42px 42px;
+
+  /*
+    Keep the grid flat and sharp.
+  */
+
+  mask-image: none;
+
+  -webkit-mask-image: none;
+
+  opacity: 0.22;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   KEEP DECORATIONS MOVING
+========================================================= */
+
+.services-decoration {
+  animation:
+    servicesFloat
+    7s
+    ease-in-out
+    infinite;
+}
+
+/* =========================================================
+   STATIC SERVICE HOVER BACKGROUND
+========================================================= */
+
+.service-item:hover {
+  background:
+    rgba(255, 255, 255, 0.75);
+}
+
+/* =========================================================
+   MODAL
+========================================================= */
+
+/*
+  The modal is an actual UI element, so its background
+  remains separate from the website background.
+*/
+
+.service-modal {
+  background: #ffffff;
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media (max-width: 650px) {
+  .services-section {
+    background: transparent !important;
+  }
+
+  .services-grid-bg {
+    background-size: 32px 32px;
+
+    opacity: 0.18;
+
+    mask-image: none;
+
+    -webkit-mask-image: none;
+  }
+
+  .services-decoration {
+    opacity: 0.15;
+  }
+}
+
+/* =========================================================
+   REDUCED MOTION
+========================================================= */
+
+@media (prefers-reduced-motion: reduce) {
+  .services-grid-bg {
+    animation: none !important;
+  }
+
+  .services-decoration {
+    animation: none !important;
   }
 }
