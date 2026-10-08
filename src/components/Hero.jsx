@@ -164,7 +164,7 @@ function Hero() {
           <div className="developer-card-inner">
 
             <img
-              src="/developer-avatar.png"
+              src="/developer-avatar.png?v=2"
               alt="Prantik - Web Developer"
               className="developer-image"
             />
