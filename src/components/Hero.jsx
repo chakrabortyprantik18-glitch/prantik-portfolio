@@ -69,7 +69,7 @@ function Hero() {
           <br />
 
           <span className="hero-name-blue">
-            CHAKRABORTY
+            CHAKRABARTY
           </span>
         </h1>
 
